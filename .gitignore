@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 node_modules
+=======
+node_modules/
+.angular/
+dist/
+.vscode/
+
+>>>>>>> gh-pages
