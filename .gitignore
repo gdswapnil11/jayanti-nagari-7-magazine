@@ -1,10 +1,5 @@
-# Dependencies
 node_modules/
-
-# Angular cache and local build artifacts
 .angular/
 dist/
+.vscode/
 
-# OS / editor files
-.DS_Store
-Thumbs.db
