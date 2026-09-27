@@ -4,17 +4,10 @@
    "homepage": "https://gdswapnil11.github.io/jayanti-nagari-7-magazine/",
   "scripts": {
     "start": "ng serve",
-<<<<<<< HEAD
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "predeploy": "ng build",
-    "deploy": "gh-pages -d dist/jayanti-nagari-7-magazine"
-=======
     "build": "ng build --configuration production --base-href /jayanti-nagari-7-magazine/",
     "watch": "ng build --watch --configuration development",
     "predeploy": "npm run build",
     "deploy": "echo \"GitHub Pages publish is handled by GitHub Actions. Push to main to deploy the static site.\""
->>>>>>> gh-pages
   },
   "private": true,
   "dependencies": {
