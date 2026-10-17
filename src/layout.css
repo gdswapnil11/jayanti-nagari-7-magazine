@@ -1,0 +1,29 @@
+.container,
+.topline,
+.masthead,
+.nav {
+  width: min(1800px, calc(100% - clamp(32px, 5vw, 96px)));
+  max-width: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.topline {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.masthead {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.nav {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.article-grid-card jn7-story-category-placeholder {
+  width: calc(100% + 48px);
+  margin: -24px -24px 2px;
+}

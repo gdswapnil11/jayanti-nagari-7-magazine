@@ -1,11 +1,12 @@
 import { Component, computed, effect, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { StoryCategoryPlaceholderComponent } from '../shared/story-category-placeholder.component';
 import { MagazineService } from '../core/services/magazine.service';
 
 @Component({
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, StoryCategoryPlaceholderComponent],
   template: `
     @if (edition(); as edition) {
       <section class="page-header container">
@@ -25,13 +26,14 @@ import { MagazineService } from '../core/services/magazine.service';
           }
         </div>
 
-        <div class="section-heading"><div><span class="eyebrow">FEATURES</span><h2>Articles</h2></div></div>
+        <div class="section-heading"><div><span class="eyebrow">FEATURES</span><h2>Stories</h2></div></div>
         <div class="article-grid">
           @for (article of edition.articles; track article.id) {
             <article class="article-grid-card">
+              <jn7-story-category-placeholder [category]="article.category" />
               <div class="article-card-top"><span class="tag">{{ article.category }}</span><small>{{ article.date }}</small></div>
               <h3>{{ article.title }}</h3><p>{{ article.excerpt }}</p>
-              <div class="article-card-footer"><span>By {{ article.author }}</span><a [routerLink]="['/articles', article.id]" class="article-read-link">Read full article →</a></div>
+              <div class="article-card-footer"><span>By {{ article.author }}</span><a [routerLink]="['/stories', article.id]" class="article-read-link">Read story →</a></div>
             </article>
           }
         </div>

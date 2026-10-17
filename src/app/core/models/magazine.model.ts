@@ -38,11 +38,13 @@ export interface Article {
   id: number;
   title: string;
   author: string;
+  authorImage?: string;
   category: 'Community' | 'People' | 'Business Corner' | 'Wellbeing' | 'Events';
   excerpt: string;
   content: string;
   date: string;
   month: string;
+image: any;
 }
 
 export interface GalleryPhoto {

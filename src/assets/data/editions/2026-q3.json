@@ -6,10 +6,10 @@
   "published": true,
   "stories": [
     {
-      "title": "Jayanti Nagari - 7 Cha Raja",
-      "category": "Ganesh Utsav",
-      "excerpt": "A glimpse of Jayanti Nagari 7's Ganesh Utsav celebrations and the beloved Cha Raja.",
-      "image": "assets/images/gallery/jayanti-nagari-cha-raja.jpeg",
+      "title": "Jayanti Nagari 7 at Night",
+      "category": "Society Life",
+      "excerpt": "A night-time view of the illuminated towers of Jayanti Nagari 7.",
+      "image": "assets/images/gallery/jayanti-nagari-night.jpeg",
       "date": "24 Sep 2026",
       "author": "Editorial Team"
     },
@@ -30,12 +30,12 @@
       "author": "Education Desk"
     },
     {
-      "title": "From Neighbour to Entrepreneur",
-      "category": "Business Corner",
-      "excerpt": "Meet residents building interesting businesses while staying connected to the community.",
+      "title": "Cricket Tournament Organiser",
+      "category": "Cricket Tournament",
+      "excerpt": "Recognising the organiser whose efforts bring players and residents together for the cricket tournament.",
       "image": "assets/images/gallery/tournament-winners.jpeg",
       "date": "14 Sep 2026",
-      "author": "Business Desk"
+      "author": "Sports Desk"
     },
     {
       "title": "Small Acts, Strong Community",
@@ -46,10 +46,10 @@
       "author": "Community Desk"
     },
     {
-      "title": "A Walk Through Our Society: Then & Now",
-      "category": "History",
-      "excerpt": "Old memories, familiar faces and the story of how Jayanti Nagari 7 has grown.",
-      "image": "assets/images/gallery/ganesh-celebration.jpeg",
+      "title": "Ganpati Festival",
+      "category": "Ganesh Utsav",
+      "excerpt": "A celebration of Ganpati Bappa and the festive spirit of Jayanti Nagari 7.",
+      "image": "assets/images/gallery/ganpati-festival.jpeg",
       "date": "05 Sep 2026",
       "author": "Archive Desk"
     }
@@ -67,23 +67,17 @@
       "location": "Society Garden",
       "description": "An evening of songs celebrating the timeless music of Kishore Kumar."
     },
-     {
-      "title": "Garba Night",
+    {
+      "title": "Garba Night (October 17-19)",
       "date": "2026-10-17",
       "location": "Society Garden",
-      "description": "An evening of Garba, music and festive celebrations for residents."
+      "description": "Three days of Garba, music and festive celebrations for residents, from October 17 through October 19."
     },
     {
-      "title": "Garba Night",
+      "title": "JN7 Friendly Matches - Navratri Special",
       "date": "2026-10-18",
-      "location": "Society Garden",
-      "description": "An evening of Garba, music and festive celebrations for residents."
-    },
-    {
-      "title": "Garba Night",
-      "date": "2026-10-19",
-      "location": "Society Garden",
-      "description": "An evening of Garba, music and festive celebrations for residents."
+      "location": "Jayanti Nagari 7",
+      "description": "1:00 PM - CD Wing vs F Wing • 1:45 PM - Women's Match • 2:30 PM - E Wing vs J Wing • 3:15 PM - KL Wing vs I Wing • 3:45 PM - G Wing vs H Wing"
     },
     {
       "title": "Ravan Dahan",
@@ -98,7 +92,7 @@
       "description": "Celebrate Diwali together with neighbours, friends and family."
     },
     {
-      "title": "31 Party Night",
+      "title": "New Year Celebration",
       "date": "2026-12-31",
       "location": "Society Garden",
       "description": "Welcome the New Year with an evening of music and celebration."
@@ -226,58 +220,99 @@
       "icon": "✨"
     }
   ],
-  "articles": [
-    {
-      "id": 1,
-      "title": "Why Weekend Walks Make Our Society Feel Like Home",
-      "author": "Meena S.",
-      "category": "Community",
-      "excerpt": "A small habit that brought more connection, smiles and neighbourhood warmth.",
-      "content": "Weekend walks through the lanes of Jayanti Nagari 7 have become a quiet ritual for many residents. Beyond the exercise, they create conversations, familiar greetings and a sense of belonging that makes a society feel alive. When neighbours smile across the road, talk over tea, and check on each other, the whole community becomes warmer and more connected. These small moments are often the foundation of a strong, caring society.",
-      "date": "22 Sep 2026",
-      "month": "September 2026"
-    },
-    {
-      "id": 2,
-      "title": "Small Business, Big Impact",
-      "author": "Arjun Verma",
-      "category": "Business Corner",
-      "excerpt": "From home-based ideas to local support, residents are shaping meaningful opportunities around us.",
-      "content": "Across our society, residents are turning practical ideas into small businesses that support neighbours and bring new energy into the community. These ventures do more than earn income; they create trust, local jobs, and a stronger sense of identity. A thriving local economy often begins with one familiar idea and a shared belief in the people around us.",
-      "date": "17 Sep 2026",
-      "month": "September 2026"
-    },
-    {
-      "id": 3,
-      "title": "Learning Together, Growing Together",
-      "author": "Pooja Nair",
-      "category": "People",
-      "excerpt": "A reflection on how a community can become a classroom of care, curiosity and encouragement.",
-      "content": "Some of the richest learning happens not in formal classrooms but in everyday conversations across balconies, parks and shared spaces. As residents come together to share ideas, support each other, and celebrate progress, they build an environment where curiosity grows naturally. Strong communities are built not only by homes and roads, but by the steady encouragement people give each other.",
-      "date": "12 Sep 2026",
-      "month": "September 2026"
-    },
-    {
-      "id": 4,
-      "title": "A Better Morning Starts With Shared Energy",
-      "author": "Ritika Joshi",
-      "category": "Wellbeing",
-      "excerpt": "How simple routines, support, and community care can make everyday life healthier.",
-      "content": "Morning routines become brighter when a neighbourhood supports healthy habits together. From a shared walk to a brief conversation at the gate, small daily interactions can encourage movement, calm, and a renewed sense of purpose. A strong society is often shaped by the tiny everyday rituals that help people feel cared for.",
-      "date": "08 Sep 2026",
-      "month": "September 2026"
-    },
-    {
-      "id": 5,
-      "title": "Neighbourhood Events That Keep Us Connected",
-      "author": "Sahil Kapoor",
-      "category": "Events",
-      "excerpt": "Festive moments, volunteer activities and spaces that bring people together again and again.",
-      "content": "Events are more than occasions on a calendar; they are a reminder that people belong to each other. When celebrations, workshops or community gatherings are planned with warmth and inclusion, they strengthen trust and create memories that last far longer than the day itself. In a society like Jayanti Nagari 7, these shared moments are part of what makes life feel rooted.",
-      "date": "03 Sep 2026",
-      "month": "September 2026"
-    }
-  ],
+  "articles":[
+  {
+    "id": 1,
+    "title": "Why Weekend Walks Make Our Society Feel Like Home",
+    "author": "Meena S.",
+    "category": "Community & Society Updates",
+    "excerpt": "A small habit that brought more connection, smiles and neighbourhood warmth.",
+    "content": "Weekend walks through the lanes of Jayanti Nagari 7 have become a quiet ritual for many residents. Beyond the exercise, they create conversations, familiar greetings and a sense of belonging that makes a society feel alive. When neighbours smile across the road, talk over tea, and check on each other, the whole community becomes warmer and more connected.",
+    "date": "22 Sep 2026",
+    "month": "September 2026",
+    "image": "assets/images/category/1.png"
+  },
+  {
+    "id": 2,
+    "title": "Solar Roofs & Composting: Our Path to Eco-Living",
+    "author": "Arjun Verma",
+    "category": "Maintenance & Eco-Living",
+    "excerpt": "How our society is cutting electricity bills and reducing waste together.",
+    "content": "Across Jayanti Nagari 7, small ecological steps are creating a big impact. From rainwater harvesting during the monsoon to balcony gardening and doorstep waste segregation, sustainable practices are becoming part of our daily routine.",
+    "date": "17 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 3,
+    "title": "Neighbourhood Events That Keep Us Connected",
+    "author": "Sahil Kapoor",
+    "category": "Sports, Youth & Events",
+    "excerpt": "Festive moments, volunteer activities and sports tournaments that bring us together.",
+    "content": "Events are more than occasions on a calendar; they are a reminder that people belong to each other. When badminton tournaments, workshops, or festival gatherings are planned with warmth, they strengthen trust and create memories that last.",
+    "date": "15 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 4,
+    "title": "Learning Together, Growing Together",
+    "author": "Pooja Nair",
+    "category": "Culture, Arts & Literature",
+    "excerpt": "A reflection on how a community can become a classroom of art, stories and encouragement.",
+    "content": "Some of the richest creative learning happens in everyday conversations across balconies, park benches, and art corners. As residents come together to share poetry, books, and artwork, they build an environment where curiosity grows naturally.",
+    "date": "12 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 5,
+    "title": "A Better Morning Starts With Shared Energy",
+    "author": "Ritika Joshi",
+    "category": "Health, Fitness & Wellness",
+    "excerpt": "How simple yoga routines and morning walks make everyday life healthier.",
+    "content": "Morning routines become brighter when a neighbourhood supports healthy habits together. From a shared yoga session in the park to a brief walk at sunrise, small daily interactions encourage movement, calm, and a renewed sense of purpose.",
+    "date": "08 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 6,
+    "title": "Authentic Home Recipes From Our Society Chefs",
+    "author": "Sunita K.",
+    "category": "Recipes & Culinary Corner",
+    "excerpt": "Favorite festive dishes and quick evening snacks shared by residents.",
+    "content": "The aromas floating from kitchen windows in Jayanti Nagari 7 tell a story of diversity and culinary tradition. From seasonal sweets to family recipes handed down across generations, sharing food recipes binds our community even closer.",
+    "date": "06 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 7,
+    "title": "Stories of Wisdom & Life Reflections",
+    "author": "Dr. Ramesh Deshmukh",
+    "category": "Senior Citizens & Wisdom",
+    "excerpt": "Life lessons, retirement reflections, and quiet afternoons in the reading lounge.",
+    "content": "Our senior residents bring invaluable wisdom and historical perspective to the society. Whether gathering for evening tea or sharing life lessons with younger generations, their presence remains the guiding anchor of Jayanti Nagari 7.",
+    "date": "04 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 8,
+    "title": "Celebrating Our Young Stars & Exam Toppers",
+    "author": "Ananya P.",
+    "category": "Kids & Student Achievements",
+    "excerpt": "Recognizing academic milestones, sports trophies, and art competition winners.",
+    "content": "From board exam achievements to winning city-level sports competitions, our young residents continue to make Jayanti Nagari 7 proud. Encouraging their effort builds confidence and inspires future excellence.",
+    "date": "02 Sep 2026",
+    "month": "September 2026"
+  },
+  {
+    "id": 9,
+    "title": "Small Ideas, Big Impact: Building Society Trust",
+    "author": "Karan Malhotra",
+    "category": "General & Opinion",
+    "excerpt": "Perspectives on modern society living, communication, and mutual respect.",
+    "content": "Living in a multi-story apartment society requires a balance between personal space and collective responsibility. Open dialogues, constructive feedback, and thoughtful habits ensure everyone enjoys a peaceful environment.",
+    "date": "01 Sep 2026",
+    "month": "September 2026"
+  }
+],
   "gallery": [
     {
       "title": "Encouraging Young Participants",
@@ -315,14 +350,14 @@
       "url": "assets/images/gallery/cricket-award-presentation.jpeg"
     },
     {
-      "title": "Garba Night Dancers",
-      "category": "Garba",
-      "url": "assets/images/gallery/garba-night-dancers.jpeg"
+      "title": "Dancing at the Festival",
+      "category": "JN-7 Ganpati Festival",
+      "url": "assets/images/gallery/festival-dancers.jpeg"
     },
     {
-      "title": "Community Garba Group",
-      "category": "Garba",
-      "url": "assets/images/gallery/garba-community-group.jpeg"
+      "title": "Festival Community Gathering",
+      "category": "JN-7 Ganpati Festival",
+      "url": "assets/images/gallery/festival-community-gathering.jpeg"
     },
     {
       "title": "Young Festival Guest",
@@ -330,14 +365,14 @@
       "url": "assets/images/gallery/ganesh-festival-child.jpeg"
     },
     {
-      "title": "A Garba Night Moment",
-      "category": "Garba",
-      "url": "assets/images/gallery/garba-attendee.jpeg"
+      "title": "A Festival Moment",
+      "category": "JN-7 Ganpati Festival",
+      "url": "assets/images/gallery/festival-moment.jpeg"
     },
     {
-      "title": "Young Garba Dancers",
-      "category": "Garba",
-      "url": "assets/images/gallery/young-garba-dancers.jpeg"
+      "title": "Young Festival Dancers",
+      "category": "JN-7 Ganpati Festival",
+      "url": "assets/images/gallery/young-festival-dancers.jpeg"
     },
     {
       "title": "Festival Family Portrait",
@@ -360,9 +395,9 @@
       "url": "assets/images/gallery/father-and-daughter-at-utsav.jpeg"
     },
     {
-      "title": "Garba Dance",
-      "category": "Garba",
-      "url": "assets/images/gallery/garba-dance.jpeg"
+      "title": "Festival Dance",
+      "category": "JN-7 Ganpati Festival",
+      "url": "assets/images/gallery/festival-dance.jpeg"
     },
     {
       "title": "Celebrating Together",

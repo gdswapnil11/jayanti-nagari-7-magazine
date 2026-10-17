@@ -21,6 +21,19 @@ import { MagazineService } from '../core/services/magazine.service';
     </section>
   `,
   styles: [`
+    .event-page-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .large-event {
+      display: block;
+    }
+
+    .large-event-content {
+      padding: 28px;
+    }
+
     .large-event.past-event {
       background: #ecebe8;
       color: #777;
@@ -31,6 +44,12 @@ import { MagazineService } from '../core/services/magazine.service';
     .large-event.past-event .tag,
     .large-event.past-event .event-date span {
       color: #777;
+    }
+
+    @media (max-width: 700px) {
+      .event-page-grid {
+        grid-template-columns: 1fr;
+      }
     }
   `]
 })

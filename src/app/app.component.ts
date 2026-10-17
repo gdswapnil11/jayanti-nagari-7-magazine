@@ -21,7 +21,6 @@ import { MagazineService } from './core/services/magazine.service';
       <nav class="nav">
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
         <a routerLink="/stories" routerLinkActive="active">Stories</a>
-        <a routerLink="/articles" routerLinkActive="active">Articles</a>
         <a routerLink="/events" routerLinkActive="active">Events</a>
         <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
         <a routerLink="/community" routerLinkActive="active">Professionals</a>
@@ -47,7 +46,6 @@ import { MagazineService } from './core/services/magazine.service';
       </div>
       <div class="footer-links">
         <a routerLink="/stories">Stories</a>
-        <a routerLink="/articles">Articles</a>
         <a routerLink="/gallery">Gallery</a>
         <a routerLink="/community">Professionals</a>
       </div>
@@ -59,10 +57,11 @@ import { MagazineService } from './core/services/magazine.service';
           <button class="close" (click)="showContribute = false">×</button>
           <span class="eyebrow">CONTRIBUTE</span>
           <h2>Be part of the next edition.</h2>
-          <p>Share a story, achievement, event, photograph, business or career opportunity with your neighbours.</p>
+          <p>Share a story, achievement or another contribution with your neighbours.</p>
           <div class="contribute-options">
-            <button>📰 Submit a story</button><button>🏆 Share an achievement</button>
-            <button>📸 Submit photos</button><button>💼 Post an opportunity</button>
+            <a href="https://forms.gle/cWJ4kDQqAEBRAXMb6" target="_blank" rel="noopener noreferrer">📰 Submit a story</a>
+            <a href="https://forms.gle/cWJ4kDQqAEBRAXMb6" target="_blank" rel="noopener noreferrer">🏆 Share an achievement</a>
+            <a href="https://forms.gle/cWJ4kDQqAEBRAXMb6" target="_blank" rel="noopener noreferrer">✦ Other contribution</a>
           </div>
         </section>
       </div>
