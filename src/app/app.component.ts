@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Component, OnInit, inject } from '@angular/core';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { filter, take } from 'rxjs';
+import { MagazineService } from './core/services/magazine.service';
 
 @Component({
   selector: 'jn7-root',
@@ -9,11 +11,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     <header class="site-header">
       <div class="topline">
         <span>JAYANTI NAGARI 7</span>
-        <span>COMMUNITY MAGAZINE • QUARTERLY EDITION • Q3 2026</span>
+        <span>COMMUNITY MAGAZINE • {{ magazine.edition()?.quarter || 'QUARTERLY EDITION' }} {{ magazine.edition()?.year || '' }}</span>
       </div>
       <div class="masthead">
         <a routerLink="/" class="brand">Jayanti <em>Nagari 7</em></a>
-        <p>Our Society. Our Stories. Our People.</p>
+        <p>Our Society. Our Stories.</p>
         <button class="contribute" (click)="showContribute = true">✦ Contribute</button>
       </div>
       <nav class="nav">
@@ -22,11 +24,19 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         <a routerLink="/articles" routerLinkActive="active">Articles</a>
         <a routerLink="/events" routerLinkActive="active">Events</a>
         <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
-        <a routerLink="/people" routerLinkActive="active">People</a>
         <a routerLink="/community" routerLinkActive="active">Professionals</a>
       </nav>
     </header>
 
+    @if (magazine.loading()) {
+      <p class="container section" role="status">Loading magazine content…</p>
+    }
+    @if (magazine.loadError(); as error) {
+      <div class="container section" role="alert">
+        <p>{{ error }}</p>
+        <button class="button" (click)="loadMagazine()">Try again</button>
+      </div>
+    }
     <main><router-outlet /></main>
 
     <footer class="footer">
@@ -59,6 +69,23 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     }
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  readonly magazine = inject(MagazineService);
+  private readonly router = inject(Router);
   showContribute = false;
+
+  ngOnInit(): void {
+    this.router.events.pipe(
+      filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+      take(1)
+    ).subscribe(event => {
+      if (!event.urlAfterRedirects.startsWith('/editions/')) {
+        this.loadMagazine();
+      }
+    });
+  }
+
+  loadMagazine(): void {
+    this.magazine.load().subscribe();
+  }
 }

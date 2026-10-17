@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { magazineArticles } from '../data';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { MagazineService } from '../core/services/magazine.service';
 
 @Component({
   standalone: true,
@@ -8,11 +9,11 @@ import { magazineArticles } from '../data';
   template: `
     <section class="page-header container">
       <span class="eyebrow">MAGAZINE FEATURE</span>
-      <h1>{{ article?.title || 'Article' }}</h1>
-      <p>{{ article?.excerpt || 'Read the full article from the community magazine.' }}</p>
+      <h1>{{ article()?.title || 'Article' }}</h1>
+      <p>{{ article()?.excerpt || 'Read the full article from the community magazine.' }}</p>
     </section>
 
-    @if (article) {
+    @if (article(); as article) {
       <section class="container section article-detail">
         <div class="article-detail-meta">
           <span class="tag">{{ article.category }}</span>
@@ -29,15 +30,20 @@ import { magazineArticles } from '../data';
           <a routerLink="/articles" class="button">← Back to articles</a>
         </div>
       </section>
+    } @else if (!magazine.loading()) {
+      <section class="container section">
+        <p role="status">This article is not available in the current edition.</p>
+        <a routerLink="/articles" class="button">← Back to articles</a>
+      </section>
     }
   `
 })
 export class ArticleDetailComponent {
-  readonly articles = magazineArticles;
-  article: (typeof magazineArticles)[number] | undefined;
-
-  constructor(private route: ActivatedRoute) {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.article = this.articles.find(item => item.id === id);
-  }
+  private readonly route = inject(ActivatedRoute);
+  readonly magazine = inject(MagazineService);
+  private readonly params = toSignal(this.route.paramMap, { initialValue: this.route.snapshot.paramMap });
+  readonly article = computed(() => {
+    const id = Number(this.params().get('id'));
+    return this.magazine.edition()?.articles.find(item => item.id === id);
+  });
 }

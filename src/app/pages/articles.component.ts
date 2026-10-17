@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { magazineArticles } from '../data';
+import { MagazineService } from '../core/services/magazine.service';
 
 @Component({
   standalone: true,
@@ -14,7 +14,7 @@ import { magazineArticles } from '../data';
 
     <section class="container section">
       <div class="article-grid">
-        @for (article of articles; track article.id) {
+        @for (article of articles(); track article.id) {
           <article class="article-grid-card">
             <div class="article-card-top">
               <span class="tag">{{ article.category }}</span>
@@ -33,5 +33,6 @@ import { magazineArticles } from '../data';
   `
 })
 export class ArticlesComponent {
-  readonly articles = magazineArticles;
+  private readonly magazine = inject(MagazineService);
+  readonly articles = computed(() => this.magazine.edition()?.articles ?? []);
 }

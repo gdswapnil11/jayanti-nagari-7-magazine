@@ -7,7 +7,8 @@ export const routes: Routes = [
   { path: 'articles/:id', loadComponent: () => import('./pages/article-detail.component').then(m => m.ArticleDetailComponent) },
   { path: 'events', loadComponent: () => import('./pages/events.component').then(m => m.EventsComponent) },
   { path: 'gallery', loadComponent: () => import('./pages/gallery.component').then(m => m.GalleryComponent) },
-  { path: 'people', loadComponent: () => import('./pages/people.component').then(m => m.PeopleComponent) },
   { path: 'community', loadComponent: () => import('./pages/community.component').then(m => m.CommunityComponent) },
+  { path: 'archive', loadComponent: () => import('./pages/archive.component').then(m => m.ArchiveComponent) },
+  { path: 'editions/:editionId', loadComponent: () => import('./pages/edition-viewer.component').then(m => m.EditionViewerComponent) },
   { path: '**', redirectTo: '' }
 ];
