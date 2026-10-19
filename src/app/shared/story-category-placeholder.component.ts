@@ -33,8 +33,8 @@ import { Component, Input } from '@angular/core';
       overflow: hidden;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #f1dfd0, #ead0bd);
-      color: #713f30;
+      background: linear-gradient(135deg, #e3ede8, #c9e0d9);
+      color: #17645f;
       isolation: isolate;
     }
 
@@ -111,23 +111,23 @@ import { Component, Input } from '@angular/core';
     }
 
     .story-placeholder[data-category='Business Corner'] {
-      background: linear-gradient(135deg, #e6e1cc, #cbd0bc);
-      color: #455849;
+      background: linear-gradient(135deg, #e6eddf, #cbd9c4);
+      color: #3c5e4c;
     }
 
     .story-placeholder[data-category='People'] {
-      background: linear-gradient(135deg, #e8d8cf, #d7c1b6);
-      color: #704c48;
+      background: linear-gradient(135deg, #e7e8e1, #d5dcd4);
+      color: #53645b;
     }
 
     .story-placeholder[data-category='Wellbeing'] {
-      background: linear-gradient(135deg, #d8e5dd, #bed6ca);
-      color: #3e6255;
+      background: linear-gradient(135deg, #dcece7, #bedbd2);
+      color: #315e55;
     }
 
     .story-placeholder[data-category='Events'] {
-      background: linear-gradient(135deg, #e6d9c7, #d7c1a2);
-      color: #705132;
+      background: linear-gradient(135deg, #e3ebe2, #cbd9ce);
+      color: #4b6252;
     }
 
     :host(.feature) .story-placeholder {

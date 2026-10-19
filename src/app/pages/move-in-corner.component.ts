@@ -66,7 +66,7 @@ import { MagazineService } from '../core/services/magazine.service';
       margin-top: 18px;
       padding: 14px 18px;
       border: 1px solid var(--line);
-      background: #f5efe9;
+      background: var(--cream);
       color: var(--ink);
       line-height: 1.6;
       font-size: 14px;
@@ -107,18 +107,18 @@ import { MagazineService } from '../core/services/magazine.service';
       letter-spacing: 1px;
       text-transform: uppercase;
       border-radius: 999px;
-      background: #e9dfd5;
+      background: #e3ede8;
       color: var(--accent);
     }
 
     .listing-badge.sale {
-      background: #eae4d8;
-      color: #6a4c32;
+      background: #e5ebe1;
+      color: #426454;
     }
 
     .listing-badge.rent {
-      background: #dfeae4;
-      color: #2f5a4a;
+      background: #d8eae4;
+      color: #17645f;
     }
 
     .listing-header strong {
@@ -149,7 +149,7 @@ import { MagazineService } from '../core/services/magazine.service';
 
     .listing-meta li {
       padding: 7px 10px;
-      background: #f3eee9;
+      background: #edf2ec;
       border: 1px solid var(--line);
       font-size: 12px;
       font-weight: 700;
