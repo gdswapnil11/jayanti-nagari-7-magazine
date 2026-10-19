@@ -8,14 +8,14 @@ import { MagazineService } from '../core/services/magazine.service';
     <section class="page-header container">
       <span class="eyebrow">CONNECT LOCALLY</span>
       <h1>Professional Directory</h1>
-      <p>Find trusted doctors, IT professionals, wellness experts, chefs, yoga coaches and more from within Jayanti Nagari 7.</p>
+      <p>Find trusted doctors, IT professionals, wellness experts, chefs, and coaches for music, football, badminton, drawing and more from within Jayanti Nagari 7.</p>
     </section>
 
     <section class="container section">
       <div class="community-toolbar">
         <div class="filter-pills">
           <button type="button" class="filter-pill" [class.active]="selectedFilter() === 'All'" (click)="selectFilter('All')">All</button>
-          @for (category of categories; track category) {
+          @for (category of categories(); track category) {
             <button type="button" class="filter-pill" [class.active]="selectedFilter() === category" (click)="selectFilter(category)">{{ category }}</button>
           }
         </div>
@@ -145,20 +145,23 @@ import { MagazineService } from '../core/services/magazine.service';
       cursor: not-allowed;
       opacity: .45;
     }
+
   `]
 })
 export class CommunityComponent {
   private readonly magazine = inject(MagazineService);
   readonly community = computed(() => this.magazine.edition()?.community ?? []);
-  readonly categories: CommunityCategory[] = [
+  readonly categories = computed(() => [...new Set<CommunityCategory>([
     'Doctors',
     'IT Professionals',
     'Health & Wellness',
     'Cooking & Nutrition',
     'Yoga & Fitness',
+    'Coaching & Tuition',
     'Home Services',
-    'Other Professionals'
-  ];
+    'Other Professionals',
+    ...this.community().map(item => item.category)
+  ])]);
   readonly selectedFilter = signal<'All' | CommunityCategory>('All');
   readonly currentPage = signal(1);
   readonly filteredCommunity = computed(() => this.selectedFilter() === 'All'
@@ -173,9 +176,7 @@ export class CommunityComponent {
   });
   readonly resultRange = computed(() => {
     const total = this.filteredCommunity().length;
-    if (total === 0) {
-      return '0';
-    }
+    if (total === 0) return '0';
     const first = (this.currentPage() - 1) * this.pageSize + 1;
     return `${first}–${Math.min(first + this.pageSize - 1, total)}`;
   });

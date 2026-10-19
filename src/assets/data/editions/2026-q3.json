@@ -218,6 +218,46 @@
       "contact": "Ask for appointment",
       "phone": "+91 90909 44556",
       "icon": "✨"
+    },
+    {
+      "vendor": "Sample Music Coach",
+      "service": "Music Lessons",
+      "category": "Coaching & Tuition",
+      "description": "Sample listing for music lessons. Replace this profile with verified resident-provided details before publishing.",
+      "detail": "Sample classes: vocal or beginner instrument lessons",
+      "contact": "Sample profile — contact details not set",
+      "phone": "Not provided (sample)",
+      "icon": "🎵"
+    },
+    {
+      "vendor": "Sample Football Coach",
+      "service": "Football Coaching",
+      "category": "Coaching & Tuition",
+      "description": "Sample listing for football coaching. Replace this profile with verified resident-provided details before publishing.",
+      "detail": "Sample classes: beginner skills and team practice",
+      "contact": "Sample profile — contact details not set",
+      "phone": "Not provided (sample)",
+      "icon": "⚽"
+    },
+    {
+      "vendor": "Sample Badminton Coach",
+      "service": "Badminton Coaching",
+      "category": "Coaching & Tuition",
+      "description": "Sample listing for badminton coaching. Replace this profile with verified resident-provided details before publishing.",
+      "detail": "Sample classes: beginner drills and court practice",
+      "contact": "Sample profile — contact details not set",
+      "phone": "Not provided (sample)",
+      "icon": "🏸"
+    },
+    {
+      "vendor": "Sample Drawing Tutor",
+      "service": "Drawing Classes",
+      "category": "Coaching & Tuition",
+      "description": "Sample listing for drawing classes. Replace this profile with verified resident-provided details before publishing.",
+      "detail": "Sample classes: sketching and beginner art",
+      "contact": "Sample profile — contact details not set",
+      "phone": "Not provided (sample)",
+      "icon": "🎨"
     }
   ],
   "moveInCorner": [

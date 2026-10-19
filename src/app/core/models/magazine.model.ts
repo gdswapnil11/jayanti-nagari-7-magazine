@@ -20,6 +20,7 @@ export type CommunityCategory =
   | 'Health & Wellness'
   | 'Cooking & Nutrition'
   | 'Yoga & Fitness'
+  | 'Coaching & Tuition'
   | 'Home Services'
   | 'Other Professionals';
 
