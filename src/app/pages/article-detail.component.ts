@@ -1,3 +1,4 @@
+import { DOCUMENT } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -22,7 +23,7 @@ import { MagazineService } from '../core/services/magazine.service';
         </div>
 
         <article class="article-detail-body">
-          <jn7-story-category-placeholder [category]="article.category" class="feature" />
+          <jn7-story-category-placeholder [category]="article.category" [image]="article.image" class="feature" />
           <div class="article-author">
             @if (article.authorImage) {
               <img class="article-author-photo" [src]="article.authorImage" [alt]="article.author">
@@ -36,12 +37,23 @@ import { MagazineService } from '../core/services/magazine.service';
             }
             <div class="article-author-info"><small>Written by</small><strong>{{ article.author }}</strong></div>
           </div>
-          <p class="article-detail-intro">{{ article.excerpt }}</p>
-          <p>{{ article.content }}</p>
+          @for (paragraph of paragraphs(article.excerpt); track $index; let first = $first) {
+            <p [class.article-detail-intro]="first">{{ paragraph }}</p>
+          }
+          @for (paragraph of paragraphs(article.content); track $index) {
+            <p>{{ paragraph }}</p>
+          }
         </article>
 
         <div class="article-detail-actions">
           <a routerLink="/stories" class="button">← Back to stories</a>
+          <a
+            class="button whatsapp-share"
+            [href]="whatsAppShareUrl()"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share this story on WhatsApp"
+          >Share on WhatsApp</a>
         </div>
       </section>
     } @else if (!magazine.loading()) {
@@ -54,6 +66,24 @@ import { MagazineService } from '../core/services/magazine.service';
   styles: [`
     .article-detail-body jn7-story-category-placeholder {
       margin-bottom: 26px;
+    }
+
+    .article-detail-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .whatsapp-share {
+      border-color: #128c7e;
+      background: #128c7e;
+      color: #fff;
+    }
+
+    .whatsapp-share:hover,
+    .whatsapp-share:focus-visible {
+      border-color: #075e54;
+      background: #075e54;
     }
 
     .article-author {
@@ -113,10 +143,23 @@ import { MagazineService } from '../core/services/magazine.service';
 })
 export class ArticleDetailComponent {
   private readonly route = inject(ActivatedRoute);
+  private readonly document = inject(DOCUMENT);
   readonly magazine = inject(MagazineService);
   private readonly params = toSignal(this.route.paramMap, { initialValue: this.route.snapshot.paramMap });
   readonly article = computed(() => {
-    const id = Number(this.params().get('id'));
-    return this.magazine.edition()?.articles.find(item => item.id === id);
+    const id = this.params().get('id');
+    return this.magazine.edition()?.articles.find(item => String(item.id) === id);
+  });
+  paragraphs(text: string): string[] {
+    return text.split(/\r?\n\s*\r?\n/).map(paragraph => paragraph.trim()).filter(Boolean);
+  }
+
+  readonly whatsAppShareUrl = computed(() => {
+    const article = this.article();
+    if (!article) return '';
+
+    const currentUrl = this.document.location?.href ?? '';
+    const message = `${article.title} ${currentUrl}`.trim();
+    return `https://wa.me/?text=${encodeURIComponent(message)}`;
   });
 }

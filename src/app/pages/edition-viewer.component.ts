@@ -30,7 +30,7 @@ import { MagazineService } from '../core/services/magazine.service';
         <div class="article-grid">
           @for (article of edition.articles; track article.id) {
             <article class="article-grid-card">
-              <jn7-story-category-placeholder [category]="article.category" />
+              <jn7-story-category-placeholder [category]="article.category" [image]="article.image" />
               <div class="article-card-top"><span class="tag">{{ article.category }}</span><small>{{ article.date }}</small></div>
               <h3>{{ article.title }}</h3><p>{{ article.excerpt }}</p>
               <div class="article-card-footer"><span>By {{ article.author }}</span><a [routerLink]="['/stories', article.id]" class="article-read-link">Read story →</a></div>

@@ -11,9 +11,9 @@ import { MagazineService } from '../core/services/magazine.service';
       <p>Moments captured by our neighbours.</p>
     </section>
     <section class="container gallery">
-      <nav class="gallery-filters" aria-label="Filter gallery by category">
+      <nav class="filter-row gallery-filters" aria-label="Filter gallery by category">
         @for (category of categories(); track category) {
-          <button type="button" [class.selected]="selectedCategory() === category" [attr.aria-pressed]="selectedCategory() === category" (click)="selectedCategory.set(category)">
+          <button type="button" class="filter-pill" [class.selected]="selectedCategory() === category" [attr.aria-pressed]="selectedCategory() === category" (click)="selectedCategory.set(category)">
             {{ category }}
           </button>
         }
@@ -51,28 +51,12 @@ import { MagazineService } from '../core/services/magazine.service';
     .container.gallery {
       padding-top: 45px;
       padding-bottom: 80px;
+      columns: auto;
+      column-gap: normal;
     }
 
     .gallery-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
       margin-bottom: 12px;
-    }
-
-    .gallery-filters button {
-      padding: 8px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--white);
-      color: var(--ink);
-      font-size: 13px;
-    }
-
-    .gallery-filters button.selected {
-      border-color: var(--dark);
-      background: var(--dark);
-      color: var(--white);
     }
 
     .gallery-count {

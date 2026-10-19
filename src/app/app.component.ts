@@ -23,6 +23,7 @@ import { MagazineService } from './core/services/magazine.service';
         <a routerLink="/stories" routerLinkActive="active">Stories</a>
         <a routerLink="/events" routerLinkActive="active">Events</a>
         <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
+        <a routerLink="/move-in-corner" routerLinkActive="active">Move-In Corner</a>
         <a routerLink="/community" routerLinkActive="active">Professionals</a>
       </nav>
     </header>
@@ -47,6 +48,7 @@ import { MagazineService } from './core/services/magazine.service';
       <div class="footer-links">
         <a routerLink="/stories">Stories</a>
         <a routerLink="/gallery">Gallery</a>
+        <a routerLink="/move-in-corner">Move-In Corner</a>
         <a routerLink="/community">Professionals</a>
       </div>
     </footer>

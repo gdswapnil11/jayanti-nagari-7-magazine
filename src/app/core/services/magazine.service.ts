@@ -107,6 +107,7 @@ export class MagazineService {
       && Array.isArray(edition.stories)
       && Array.isArray(edition.events)
       && Array.isArray(edition.community)
+      && Array.isArray(edition.moveInCorner)
       && Array.isArray(edition.articles)
       && Array.isArray(edition.gallery)
       && Array.isArray(edition.announcements)

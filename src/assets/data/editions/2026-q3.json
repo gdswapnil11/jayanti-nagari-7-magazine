@@ -9,7 +9,7 @@
       "title": "Jayanti Nagari 7 at Night",
       "category": "Society Life",
       "excerpt": "A night-time view of the illuminated towers of Jayanti Nagari 7.",
-      "image": "assets/images/gallery/jayanti-nagari-night.jpeg",
+      "image": "assets/images/jn7-home-cover.png",
       "date": "24 Sep 2026",
       "author": "Editorial Team"
     },
@@ -220,129 +220,164 @@
       "icon": "✨"
     }
   ],
-  "articles":[
-  {
-    "id": 1,
-    "title": "Why Weekend Walks Make Our Society Feel Like Home",
-    "author": "Meena S.",
+  "moveInCorner": [
+    {
+      "id": 1,
+      "title": "2 BHK Flat for Rent",
+      "type": "For Rent",
+      "price": "₹24,000 / month",
+      "location": "Near Main Gate, Jayanti Nagari 7",
+      "area": "980 sq ft",
+      "bedrooms": "2 BHK",
+      "description": "Spacious west-facing flat with open balcony, modular kitchen and covered parking. Suitable for a working couple or small family.",
+      "contact": "Call Priya • +91 98765 44321",
+      "postedBy": "Resident owner"
+    },
+    {
+      "id": 2,
+      "title": "3 BHK Apartment for Sale",
+      "type": "For Sale",
+      "price": "₹68 Lakh",
+      "location": "A-Block, Jayanti Nagari 7",
+      "area": "1,250 sq ft",
+      "bedrooms": "3 BHK",
+      "description": "Well-maintained apartment with southern light, two bathrooms, utility area and easy access to the society park.",
+      "contact": "Call Rohan • +91 98112 44167",
+      "postedBy": "Owner direct"
+    },
+    {
+      "id": 3,
+      "title": "1 RK Studio for Rent",
+      "type": "For Rent",
+      "price": "₹14,500 / month",
+      "location": "D-Wing, Jayanti Nagari 7",
+      "area": "420 sq ft",
+      "bedrooms": "1 RK",
+      "description": "Single-room studio with kitchenette, wardrobe and immediate availability. Ideal for a working professional.",
+      "contact": "WhatsApp Suresh • +91 99887 30201",
+      "postedBy": "Resident host"
+    },
+    {
+      "id": 4,
+      "title": "Premium 2 BHK for Sale",
+      "type": "For Sale",
+      "price": "₹82 Lakh",
+      "location": "Garden View Residency, Jayanti Nagari 7",
+      "area": "1,080 sq ft",
+      "bedrooms": "2 BHK",
+      "description": "Bright apartment with premium finish, balcony view, and fully ready-to-move-in condition. No brokerage.",
+      "contact": "Call Meena • +91 98220 77331",
+      "postedBy": "Direct owner"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Why Weekend Walks Make Our Society Feel Like Home",
+      "author": "Meena S.",
+      "category": "Community & Society Updates",
+      "excerpt": "A small habit that brought more connection, smiles and neighbourhood warmth.",
+      "content": "Weekend walks through the lanes of Jayanti Nagari 7 have become a quiet ritual for many residents. Beyond the exercise, they create conversations, familiar greetings and a sense of belonging that makes a society feel alive. When neighbours smile across the road, talk over tea, and check on each other, the whole community becomes warmer and more connected.",
+      "date": "22 Sep 2026",
+      "month": "September 2026",
+      "image": "assets/images/category/1.png"
+    },
+    {
+      "id": 2,
+      "title": "Solar Roofs & Composting: Our Path to Eco-Living",
+      "author": "Arjun Verma",
+      "category": "Maintenance & Eco-Living",
+      "excerpt": "How our society is cutting electricity bills and reducing waste together.",
+      "content": "Across Jayanti Nagari 7, small ecological steps are creating a big impact. From rainwater harvesting during the monsoon to balcony gardening and doorstep waste segregation, sustainable practices are becoming part of our daily routine.",
+      "date": "17 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 3,
+      "title": "Neighbourhood Events That Keep Us Connected",
+      "author": "Sahil Kapoor",
+      "category": "Sports, Youth & Events",
+      "excerpt": "Festive moments, volunteer activities and sports tournaments that bring us together.",
+      "content": "Events are more than occasions on a calendar; they are a reminder that people belong to each other. When badminton tournaments, workshops, or festival gatherings are planned with warmth, they strengthen trust and create memories that last.",
+      "date": "15 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 4,
+      "title": "Learning Together, Growing Together",
+      "author": "Pooja Nair",
+      "category": "Culture, Arts & Literature",
+      "excerpt": "A reflection on how a community can become a classroom of art, stories and encouragement.",
+      "content": "Some of the richest creative learning happens in everyday conversations across balconies, park benches, and art corners. As residents come together to share poetry, books, and artwork, they build an environment where curiosity grows naturally.",
+      "date": "12 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 5,
+      "title": "A Better Morning Starts With Shared Energy",
+      "author": "Ritika Joshi",
+      "category": "Health, Fitness & Wellness",
+      "excerpt": "How simple yoga routines and morning walks make everyday life healthier.",
+      "content": "Morning routines become brighter when a neighbourhood supports healthy habits together. From a shared yoga session in the park to a brief walk at sunrise, small daily interactions encourage movement, calm, and a renewed sense of purpose.",
+      "date": "08 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 6,
+      "title": "Authentic Home Recipes From Our Society Chefs",
+      "author": "Sunita K.",
+      "category": "Recipes & Culinary Corner",
+      "excerpt": "Favorite festive dishes and quick evening snacks shared by residents.",
+      "content": "The aromas floating from kitchen windows in Jayanti Nagari 7 tell a story of diversity and culinary tradition. From seasonal sweets to family recipes handed down across generations, sharing food recipes binds our community even closer.",
+      "date": "06 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 7,
+      "title": "Stories of Wisdom & Life Reflections",
+      "author": "Dr. Ramesh Deshmukh",
+      "category": "Senior Citizens & Wisdom",
+      "excerpt": "Life lessons, retirement reflections, and quiet afternoons in the reading lounge.",
+      "content": "Our senior residents bring invaluable wisdom and historical perspective to the society. Whether gathering for evening tea or sharing life lessons with younger generations, their presence remains the guiding anchor of Jayanti Nagari 7.",
+      "date": "04 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 8,
+      "title": "Celebrating Our Young Stars & Exam Toppers",
+      "author": "Ananya P.",
+      "category": "Kids & Student Achievements",
+      "excerpt": "Recognizing academic milestones, sports trophies, and art competition winners.",
+      "content": "From board exam achievements to winning city-level sports competitions, our young residents continue to make Jayanti Nagari 7 proud. Encouraging their effort builds confidence and inspires future excellence.",
+      "date": "02 Sep 2026",
+      "month": "September 2026"
+    },
+    {
+      "id": 9,
+      "title": "Small Ideas, Big Impact: Building Society Trust",
+      "author": "Karan Malhotra",
+      "category": "General & Opinion",
+      "excerpt": "Perspectives on modern society living, communication, and mutual respect.",
+      "content": "Living in a multi-story apartment society requires a balance between personal space and collective responsibility. Open dialogues, constructive feedback, and thoughtful habits ensure everyone enjoys a peaceful environment.",
+      "date": "01 Sep 2026",
+      "month": "September 2026"
+    },
+   {
+    "id": "41a76a06-a538-43d3-93e7-0257cdec33dc",
+    "title": "Building Stronger Connections",
+    "author": "Swapnil Muely",
     "category": "Community & Society Updates",
-    "excerpt": "A small habit that brought more connection, smiles and neighbourhood warmth.",
-    "content": "Weekend walks through the lanes of Jayanti Nagari 7 have become a quiet ritual for many residents. Beyond the exercise, they create conversations, familiar greetings and a sense of belonging that makes a society feel alive. When neighbours smile across the road, talk over tea, and check on each other, the whole community becomes warmer and more connected.",
-    "date": "22 Sep 2026",
-    "month": "September 2026",
-    "image": "assets/images/category/1.png"
-  },
-  {
-    "id": 2,
-    "title": "Solar Roofs & Composting: Our Path to Eco-Living",
-    "author": "Arjun Verma",
-    "category": "Maintenance & Eco-Living",
-    "excerpt": "How our society is cutting electricity bills and reducing waste together.",
-    "content": "Across Jayanti Nagari 7, small ecological steps are creating a big impact. From rainwater harvesting during the monsoon to balcony gardening and doorstep waste segregation, sustainable practices are becoming part of our daily routine.",
-    "date": "17 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 3,
-    "title": "Neighbourhood Events That Keep Us Connected",
-    "author": "Sahil Kapoor",
-    "category": "Sports, Youth & Events",
-    "excerpt": "Festive moments, volunteer activities and sports tournaments that bring us together.",
-    "content": "Events are more than occasions on a calendar; they are a reminder that people belong to each other. When badminton tournaments, workshops, or festival gatherings are planned with warmth, they strengthen trust and create memories that last.",
-    "date": "15 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 4,
-    "title": "Learning Together, Growing Together",
-    "author": "Pooja Nair",
-    "category": "Culture, Arts & Literature",
-    "excerpt": "A reflection on how a community can become a classroom of art, stories and encouragement.",
-    "content": "Some of the richest creative learning happens in everyday conversations across balconies, park benches, and art corners. As residents come together to share poetry, books, and artwork, they build an environment where curiosity grows naturally.",
-    "date": "12 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 5,
-    "title": "A Better Morning Starts With Shared Energy",
-    "author": "Ritika Joshi",
-    "category": "Health, Fitness & Wellness",
-    "excerpt": "How simple yoga routines and morning walks make everyday life healthier.",
-    "content": "Morning routines become brighter when a neighbourhood supports healthy habits together. From a shared yoga session in the park to a brief walk at sunrise, small daily interactions encourage movement, calm, and a renewed sense of purpose.",
-    "date": "08 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 6,
-    "title": "Authentic Home Recipes From Our Society Chefs",
-    "author": "Sunita K.",
-    "category": "Recipes & Culinary Corner",
-    "excerpt": "Favorite festive dishes and quick evening snacks shared by residents.",
-    "content": "The aromas floating from kitchen windows in Jayanti Nagari 7 tell a story of diversity and culinary tradition. From seasonal sweets to family recipes handed down across generations, sharing food recipes binds our community even closer.",
-    "date": "06 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 7,
-    "title": "Stories of Wisdom & Life Reflections",
-    "author": "Dr. Ramesh Deshmukh",
-    "category": "Senior Citizens & Wisdom",
-    "excerpt": "Life lessons, retirement reflections, and quiet afternoons in the reading lounge.",
-    "content": "Our senior residents bring invaluable wisdom and historical perspective to the society. Whether gathering for evening tea or sharing life lessons with younger generations, their presence remains the guiding anchor of Jayanti Nagari 7.",
-    "date": "04 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 8,
-    "title": "Celebrating Our Young Stars & Exam Toppers",
-    "author": "Ananya P.",
-    "category": "Kids & Student Achievements",
-    "excerpt": "Recognizing academic milestones, sports trophies, and art competition winners.",
-    "content": "From board exam achievements to winning city-level sports competitions, our young residents continue to make Jayanti Nagari 7 proud. Encouraging their effort builds confidence and inspires future excellence.",
-    "date": "02 Sep 2026",
-    "month": "September 2026"
-  },
-  {
-    "id": 9,
-    "title": "Small Ideas, Big Impact: Building Society Trust",
-    "author": "Karan Malhotra",
-    "category": "General & Opinion",
-    "excerpt": "Perspectives on modern society living, communication, and mutual respect.",
-    "content": "Living in a multi-story apartment society requires a balance between personal space and collective responsibility. Open dialogues, constructive feedback, and thoughtful habits ensure everyone enjoys a peaceful environment.",
-    "date": "01 Sep 2026",
-    "month": "September 2026"
+    "excerpt": "In an increasingly fast-paced and digital world, the importance of strong communities and active social involvement has never been more vital. Whether in local neighborhoods or online spaces, hyper-connected networks offer an unparalleled platform for collective progress, support, and positive change.",
+    "content": "In an increasingly fast-paced and digital world, the importance of strong communities and active social involvement has never been more vital. Whether through physical neighborhoods or virtual interest groups, hyper-connected networks offer an unparalleled foundation for collective progress, emotional support, and positive social change. When individuals come together around common goals, they transform isolated efforts into meaningful social movements that enrich everyday life.\n\nModern community initiatives are transforming how we address everyday challenges. From organizing neighborhood clean-ups and establishing shared community gardens to launching local learning circles and resource-sharing banks, localized groups are finding creative solutions to pressing issues like environmental sustainability and educational inequality. Furthermore, modern social platforms allow people to organize rapidly, spread critical awareness, and mobilize aid during emergencies with unprecedented speed.\n\nBeyond practical benefits, active social engagement plays a crucial role in personal well-being and social cohesion. Participating in community programs helps reduce feelings of isolation, builds trust among diverse populations, and fosters empathy across different cultural and socioeconomic backgrounds. By shifting our focus from individual convenience to collective well-being, we build safer, fairer, and far more resilient environments for everyone.\n\nSustaining a vibrant community ultimately depends on ongoing participation and open communication. Simple actions—such as attending local council meetings, volunteering for regional outreach initiatives, or simply checking in on a neighbor—collectively strengthen the social quilt of our towns and cities. As we navigate an ever-changing future, investing time and care into our local networks remains one of the most impactful ways to create a healthier, more unified society.\n\nHow are you currently involved in your local or online community, or is there a specific project you would like to explore next?",
+    "date": "19 Oct 2026",
+    "month": "October 2026"
   }
-],
+  ],
   "gallery": [
     {
-      "title": "Encouraging Young Participants",
-      "category": "Kids' Awards",
-      "url": "assets/images/gallery/ganesh-family.jpeg"
-    },
-    {
-      "title": "Friends at the Festival",
+      "title": "Child Enjoying Utsav",
       "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/festival-friends.jpeg"
-    },
-    {
-      "title": "Ganesh Celebration",
-      "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/ganesh-celebration.jpeg"
-    },
-    {
-      "title": "Cricket Awards",
-      "category": "Cricket",
-      "url": "assets/images/gallery/cricket-awards.jpeg"
-    },
-    {
-      "title": "Junior Cricket Team",
-      "category": "Cricket",
-      "url": "assets/images/gallery/junior-cricket-team.jpeg"
-    },
-    {
-      "title": "Cricket Tournament Winner",
-      "category": "Cricket",
-      "url": "assets/images/gallery/cricket-tournament-winner.jpeg"
+      "url": "assets/images/gallery/child-enjoying-utsav.jpeg"
     },
     {
       "title": "Cricket Award Presentation",
@@ -350,29 +385,44 @@
       "url": "assets/images/gallery/cricket-award-presentation.jpeg"
     },
     {
-      "title": "Dancing at the Festival",
-      "category": "JN-7 Ganpati Festival",
-      "url": "assets/images/gallery/festival-dancers.jpeg"
+      "title": "Cricket Awards",
+      "category": "Cricket",
+      "url": "assets/images/gallery/cricket-awards.jpeg"
+    },
+    {
+      "title": "Cricket Tournament Winner",
+      "category": "Cricket",
+      "url": "assets/images/gallery/cricket-tournament-winner.jpeg"
+    },
+    {
+      "title": "Cricket",
+      "category": "Cricket",
+      "url": "assets/images/gallery/cricket.jpeg"
+    },
+    {
+      "title": "Father And Daughter At Utsav",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/father-and-daughter-at-utsav.jpeg"
+    },
+    {
+      "title": "Festival Celebration",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/festival-celebration.jpeg"
     },
     {
       "title": "Festival Community Gathering",
-      "category": "JN-7 Ganpati Festival",
+      "category": "Ganesh Utsav",
       "url": "assets/images/gallery/festival-community-gathering.jpeg"
     },
     {
-      "title": "Young Festival Guest",
+      "title": "Festival Dance",
       "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/ganesh-festival-child.jpeg"
+      "url": "assets/images/gallery/festival-dance.jpeg"
     },
     {
-      "title": "A Festival Moment",
-      "category": "JN-7 Ganpati Festival",
-      "url": "assets/images/gallery/festival-moment.jpeg"
-    },
-    {
-      "title": "Young Festival Dancers",
-      "category": "JN-7 Ganpati Festival",
-      "url": "assets/images/gallery/young-festival-dancers.jpeg"
+      "title": "Festival Dancers",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/festival-dancers.jpeg"
     },
     {
       "title": "Festival Family Portrait",
@@ -380,29 +430,14 @@
       "url": "assets/images/gallery/festival-family-portrait.jpeg"
     },
     {
-      "title": "Ganesh Utsav",
+      "title": "Festival Friends",
       "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/ganesh-utsav-idol.jpeg"
+      "url": "assets/images/gallery/festival-friends.jpeg"
     },
     {
-      "title": "Father and Child at the Festival",
+      "title": "Festival Moment",
       "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/father-and-child-at-utsav.jpeg"
-    },
-    {
-      "title": "Father and Daughter at the Festival",
-      "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/father-and-daughter-at-utsav.jpeg"
-    },
-    {
-      "title": "Festival Dance",
-      "category": "JN-7 Ganpati Festival",
-      "url": "assets/images/gallery/festival-dance.jpeg"
-    },
-    {
-      "title": "Celebrating Together",
-      "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/festival-celebration.jpeg"
+      "url": "assets/images/gallery/festival-moment.jpeg"
     },
     {
       "title": "Festival Portrait",
@@ -410,24 +445,44 @@
       "url": "assets/images/gallery/festival-portrait.jpeg"
     },
     {
-      "title": "Young Festival Participant",
+      "title": "Ganesh Family",
       "category": "Ganesh Utsav",
-      "url": "assets/images/gallery/child-enjoying-utsav.jpeg"
+      "url": "assets/images/gallery/ganesh-family.jpeg"
     },
     {
-      "title": "Young Cricket Fans",
-      "category": "Cricket",
-      "url": "assets/images/gallery/junior-cricket-fans.jpeg"
+      "title": "Ganesh Festival Child",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/ganesh-festival-child.jpeg"
     },
     {
-      "title": "Team Celebration",
-      "category": "Cricket",
-      "url": "assets/images/gallery/team-celebration.jpeg"
+      "title": "Ganesh Utsav Idol",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/ganesh-utsav-idol.jpeg"
     },
     {
-      "title": "Players at the Boundary",
-      "category": "Cricket",
-      "url": "assets/images/gallery/players-at-the-boundary.jpeg"
+      "title": "Garba Night Community Dance",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/garba-night-community-dance.jpeg"
+    },
+    {
+      "title": "Garba Night Decorated Dance Floor",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/garba-night-decorated-dance-floor.jpeg"
+    },
+    {
+      "title": "Garba Night Festival Celebration",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/garba-night-festival-celebration.jpeg"
+    },
+    {
+      "title": "Garba Night Residents Dancing",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/garba-night-residents-dancing.jpeg"
+    },
+    {
+      "title": "Gen Alpha Vibe",
+      "category": "Community Gallery",
+      "url": "assets/images/gallery/gen-alpha-vibe.jpeg"
     },
     {
       "title": "Jayanti Cricket Team",
@@ -435,7 +490,32 @@
       "url": "assets/images/gallery/jayanti-cricket-team.jpeg"
     },
     {
-      "title": "A Moment of Team Spirit",
+      "title": "Jayanti Nagari Cha Raja",
+      "category": "Society Life",
+      "url": "assets/images/gallery/jayanti-nagari-cha-raja.jpeg"
+    },
+    {
+      "title": "Junior Cricket Fans",
+      "category": "Cricket",
+      "url": "assets/images/gallery/junior-cricket-fans.jpeg"
+    },
+    {
+      "title": "Junior Cricket Team",
+      "category": "Cricket",
+      "url": "assets/images/gallery/junior-cricket-team.jpeg"
+    },
+    {
+      "title": "Players At The Boundary",
+      "category": "Cricket",
+      "url": "assets/images/gallery/players-at-the-boundary.jpeg"
+    },
+    {
+      "title": "Team Celebration",
+      "category": "Cricket",
+      "url": "assets/images/gallery/team-celebration.jpeg"
+    },
+    {
+      "title": "Team Huddle",
       "category": "Cricket",
       "url": "assets/images/gallery/team-huddle.jpeg"
     },
@@ -448,6 +528,11 @@
       "title": "Victory Celebration",
       "category": "Cricket",
       "url": "assets/images/gallery/victory-celebration.jpeg"
+    },
+    {
+      "title": "Young Festival Dancers",
+      "category": "Ganesh Utsav",
+      "url": "assets/images/gallery/young-festival-dancers.jpeg"
     }
   ],
   "announcements": [],

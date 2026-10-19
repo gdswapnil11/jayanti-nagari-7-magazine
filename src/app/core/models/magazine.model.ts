@@ -35,16 +35,16 @@ export interface CommunityItem {
 }
 
 export interface Article {
-  id: number;
+  id: number | string;
   title: string;
   author: string;
   authorImage?: string;
-  category: 'Community' | 'People' | 'Business Corner' | 'Wellbeing' | 'Events';
+  category: 'Community & Society Updates' | 'Maintenance & Eco-Living' | 'Sports, Youth & Events' | 'Culture, Arts & Literature' | 'Health, Fitness & Wellness' | 'Recipes & Culinary Corner' | 'Senior Citizens & Wisdom' | 'Kids & Student Achievements' | 'General & Opinion';
   excerpt: string;
   content: string;
   date: string;
   month: string;
-image: any;
+  image?: string;
 }
 
 export interface GalleryPhoto {
@@ -79,10 +79,24 @@ export interface MagazineManifest {
   editions: EditionSummary[];
 }
 
+export interface MoveInListing {
+  id: number;
+  title: string;
+  type: 'For Sale' | 'For Rent';
+  price: string;
+  location: string;
+  area: string;
+  bedrooms: string;
+  description: string;
+  contact: string;
+  postedBy: string;
+}
+
 export interface MagazineEdition extends EditionSummary {
   stories: Story[];
   events: EventItem[];
   community: CommunityItem[];
+  moveInCorner: MoveInListing[];
   articles: Article[];
   gallery: GalleryPhoto[];
   announcements: Announcement[];
