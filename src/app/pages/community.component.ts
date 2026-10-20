@@ -16,6 +16,7 @@ import { MagazineService } from '../core/services/magazine.service';
       <div class="community-toolbar">
         <div class="filter-pills">
           <button type="button" class="filter-pill" [class.active]="selectedFilter() === 'All'" (click)="selectFilter('All')">All</button>
+          <button type="button" class="filter-pill" [class.active]="selectedFilter() === 'JN-7 Resident'" (click)="selectFilter('JN-7 Resident')">✦ JN-7 Resident</button>
           @for (category of categories(); track category) {
             <button type="button" class="filter-pill" [class.active]="selectedFilter() === category" (click)="selectFilter(category)">{{ category }}</button>
           }
@@ -41,8 +42,15 @@ import { MagazineService } from '../core/services/magazine.service';
         @for (item of paginatedCommunity(); track item.vendor) {
           <article class="community-card">
             <div class="community-top">
-              <div class="community-icon">{{ item.icon }}</div>
-              <span class="tag">{{ item.category }}</span>
+              <div class="community-icon">{{ item.icon || '🏘️' }}</div>
+              <div class="community-tags">
+                <span class="tag">{{ item.category }}</span>
+                @if (item.isJayantiNagariOwner) {
+                  <span class="owner-tag">
+                    <span class="owner-tag-mark" aria-hidden="true">✦</span>JN-7 Resident
+                  </span>
+                }
+              </div>
             </div>
             <div class="vendor-meta">
               <h2>{{ item.vendor }}</h2>
@@ -54,14 +62,16 @@ import { MagazineService } from '../core/services/magazine.service';
               <li>{{ item.contact }}</li>
               <li>{{ item.phone }}</li>
             </ul>
-            <a
-              class="text-button"
-              [href]="getMapsUrl(item.vendor)"
-              target="_blank"
-              rel="noopener noreferrer">View on Google Maps →</a>
-            <button class="text-button details-button" type="button" (click)="openDetails(item)">
-              View details
-            </button>
+            <div class="profile-actions">
+              <a
+                class="text-button map-button"
+                [href]="getMapsUrl(item.vendor)"
+                target="_blank"
+                rel="noopener noreferrer">Map</a>
+              <button class="text-button details-button" type="button" (click)="openDetails(item)">
+                View details <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </article>
         }
       </div>
@@ -93,8 +103,15 @@ import { MagazineService } from '../core/services/magazine.service';
         >
           <button class="profile-dialog-close" type="button" aria-label="Close profile details" (click)="closeDetails()">×</button>
           <div class="community-top">
-            <div class="community-icon">{{ profile.icon }}</div>
-            <span class="tag">{{ profile.category }}</span>
+            <div class="community-icon">{{ profile.icon || '🏘️' }}</div>
+            <div class="community-tags">
+              <span class="tag">{{ profile.category }}</span>
+              @if (profile.isJayantiNagariOwner) {
+                <span class="owner-tag">
+                  <span class="owner-tag-mark" aria-hidden="true">✦</span>JN-7 Resident
+                </span>
+              }
+            </div>
           </div>
           <h2 id="profile-title">{{ profile.vendor }}</h2>
           <h3>{{ profile.service }}</h3>
@@ -147,18 +164,73 @@ import { MagazineService } from '../core/services/magazine.service';
 
     .community-card {
       min-height: 0;
-      padding: 16px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(155deg, var(--paper), color-mix(in srgb, var(--cream) 48%, var(--paper)));
+      box-shadow: 0 5px 18px rgb(22 59 58 / 6%);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .community-card:hover {
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+      box-shadow: 0 12px 28px rgb(22 59 58 / 12%);
+    }
+
+    .community-card:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
     }
 
     .community-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
       margin-bottom: 10px;
     }
 
+    .community-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .owner-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 9px;
+      border: 1px solid #0d625e;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #124f4c, #147d75 58%, #29958a);
+      color: #fff;
+      box-shadow: 0 2px 7px rgb(20 125 117 / 24%), inset 0 1px 0 rgb(255 255 255 / 22%);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .owner-tag-mark {
+      color: #f1d993;
+      font-size: 11px;
+      line-height: 1;
+    }
+
     .community-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 11px;
-      font-size: 21px;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      border: 1px solid color-mix(in srgb, var(--accent) 12%, var(--line));
+      border-radius: 14px;
+      background: linear-gradient(145deg, var(--cream), var(--white));
+      box-shadow: inset 0 1px 0 rgb(255 255 255 / 75%);
+      font-size: 24px;
     }
 
     .vendor-meta {
@@ -166,30 +238,88 @@ import { MagazineService } from '../core/services/magazine.service';
     }
 
     .vendor-meta h2 {
-      font-size: 21px;
+      font-size: 23px;
+      line-height: 1.2;
       margin-bottom: 4px;
     }
 
     .vendor-meta span {
+      display: block;
+      color: var(--accent);
       font-size: 12px;
+      font-weight: 700;
     }
 
     .community-card p {
       font-size: 13px;
-      line-height: 1.5;
-      margin-bottom: 10px;
+      line-height: 1.65;
+      margin: 0 0 12px;
     }
 
     .service-points {
-      gap: 4px;
+      gap: 7px;
       font-size: 12px;
-      line-height: 1.45;
-      margin-bottom: 12px;
+      line-height: 1.5;
+      margin: 0 0 18px;
     }
 
-    .details-button {
-      align-self: flex-start;
-      margin-top: 10px;
+    .service-points li::marker {
+      color: var(--accent);
+    }
+
+    .profile-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .profile-actions .text-button {
+      display: inline-flex;
+      min-height: 36px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+    }
+
+    .profile-actions .map-button {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .profile-actions .map-button:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .profile-actions .details-button {
+      margin-left: auto;
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .profile-actions .details-button:hover {
+      filter: brightness(.92);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .community-card,
+      .profile-actions .text-button {
+        transition: none;
+      }
+
+      .community-card:hover {
+        transform: none;
+      }
     }
 
     .profile-dialog-backdrop {
@@ -307,7 +437,7 @@ export class CommunityComponent {
     'Other Professionals',
     ...this.community().map(item => item.category)
   ])]);
-  readonly selectedFilter = signal<'All' | CommunityCategory>('All');
+  readonly selectedFilter = signal<'All' | 'JN-7 Resident' | CommunityCategory>('All');
   readonly searchTerm = signal('');
   readonly currentPage = signal(1);
   readonly selectedProfile = signal<CommunityItem | null>(null);
@@ -316,7 +446,8 @@ export class CommunityComponent {
     const category = this.selectedFilter();
     const query = this.searchTerm().trim().toLocaleLowerCase();
     return this.community().filter(item => {
-      const matchesCategory = category === 'All' || item.category === category;
+      const matchesCategory = category === 'All'
+        || (category === 'JN-7 Resident' ? item.isJayantiNagariOwner === true : item.category === category);
       const matchesSearch = !query || Object.values(item)
         .some(value => String(value).toLocaleLowerCase().includes(query));
       return matchesCategory && matchesSearch;
@@ -337,7 +468,7 @@ export class CommunityComponent {
     return `${first}–${Math.min(first + pageSize - 1, total)}`;
   });
 
-  selectFilter(filter: 'All' | CommunityCategory): void {
+  selectFilter(filter: 'All' | 'JN-7 Resident' | CommunityCategory): void {
     this.selectedFilter.set(filter);
     this.currentPage.set(1);
   }

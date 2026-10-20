@@ -33,6 +33,7 @@ export interface CommunityItem {
   contact: string;
   phone: string;
   icon: string;
+  isJayantiNagariOwner?: boolean;
 }
 
 export interface Article {

@@ -227,7 +227,8 @@
       "detail": "Sample classes: vocal or beginner instrument lessons",
       "contact": "Sample profile — contact details not set",
       "phone": "Not provided (sample)",
-      "icon": "🎵"
+      "icon": "🎵",
+      "isJayantiNagariOwner": false
     },
     {
       "vendor": "Sample Football Coach",
@@ -237,7 +238,8 @@
       "detail": "Sample classes: beginner skills and team practice",
       "contact": "Sample profile — contact details not set",
       "phone": "Not provided (sample)",
-      "icon": "⚽"
+      "icon": "⚽",
+      "isJayantiNagariOwner": true
     },
     {
       "vendor": "Sample Badminton Coach",
@@ -247,7 +249,8 @@
       "detail": "Sample classes: beginner drills and court practice",
       "contact": "Sample profile — contact details not set",
       "phone": "Not provided (sample)",
-      "icon": "🏸"
+      "icon": "🏸",
+      "isJayantiNagariOwner": true
     },
     {
       "vendor": "Sample Drawing Tutor",
@@ -257,7 +260,8 @@
       "detail": "Sample classes: sketching and beginner art",
       "contact": "Sample profile — contact details not set",
       "phone": "Not provided (sample)",
-      "icon": "🎨"
+      "icon": "🎨",
+      "isJayantiNagariOwner": true
     }
   ],
   "moveInCorner": [
@@ -277,25 +281,13 @@
       "id": 2,
       "title": "3 BHK Apartment for Sale",
       "type": "For Sale",
-      "price": "₹68 Lakh",
+      "price": "₹90 Lakh",
       "location": "A-Block, Jayanti Nagari 7",
       "area": "1,250 sq ft",
       "bedrooms": "3 BHK",
       "description": "Well-maintained apartment with southern light, two bathrooms, utility area and easy access to the society park.",
       "contact": "Call Rohan • +91 98112 44167",
       "postedBy": "Owner direct"
-    },
-    {
-      "id": 3,
-      "title": "1 RK Studio for Rent",
-      "type": "For Rent",
-      "price": "₹14,500 / month",
-      "location": "D-Wing, Jayanti Nagari 7",
-      "area": "420 sq ft",
-      "bedrooms": "1 RK",
-      "description": "Single-room studio with kitchenette, wardrobe and immediate availability. Ideal for a working professional.",
-      "contact": "WhatsApp Suresh • +91 99887 30201",
-      "postedBy": "Resident host"
     },
     {
       "id": 4,
@@ -320,7 +312,7 @@
       "content": "Weekend walks through the lanes of Jayanti Nagari 7 have become a quiet ritual for many residents. Beyond the exercise, they create conversations, familiar greetings and a sense of belonging that makes a society feel alive. When neighbours smile across the road, talk over tea, and check on each other, the whole community becomes warmer and more connected.",
       "date": "22 Sep 2026",
       "month": "September 2026",
-      "image": "assets/images/category/1.png"
+      "image": "assets/images/categories/Community & Society Updates.png"
     },
     {
       "id": 2,
@@ -407,11 +399,34 @@
     "title": "Building Stronger Connections",
     "author": "Swapnil Muely",
     "category": "Community & Society Updates",
-    "excerpt": "In an increasingly fast-paced and digital world, the importance of strong communities and active social involvement has never been more vital. Whether in local neighborhoods or online spaces, hyper-connected networks offer an unparalleled platform for collective progress, support, and positive change.",
-    "content": "In an increasingly fast-paced and digital world, the importance of strong communities and active social involvement has never been more vital. Whether through physical neighborhoods or virtual interest groups, hyper-connected networks offer an unparalleled foundation for collective progress, emotional support, and positive social change. When individuals come together around common goals, they transform isolated efforts into meaningful social movements that enrich everyday life.\n\nModern community initiatives are transforming how we address everyday challenges. From organizing neighborhood clean-ups and establishing shared community gardens to launching local learning circles and resource-sharing banks, localized groups are finding creative solutions to pressing issues like environmental sustainability and educational inequality. Furthermore, modern social platforms allow people to organize rapidly, spread critical awareness, and mobilize aid during emergencies with unprecedented speed.\n\nBeyond practical benefits, active social engagement plays a crucial role in personal well-being and social cohesion. Participating in community programs helps reduce feelings of isolation, builds trust among diverse populations, and fosters empathy across different cultural and socioeconomic backgrounds. By shifting our focus from individual convenience to collective well-being, we build safer, fairer, and far more resilient environments for everyone.\n\nSustaining a vibrant community ultimately depends on ongoing participation and open communication. Simple actions—such as attending local council meetings, volunteering for regional outreach initiatives, or simply checking in on a neighbor—collectively strengthen the social quilt of our towns and cities. As we navigate an ever-changing future, investing time and care into our local networks remains one of the most impactful ways to create a healthier, more unified society.\n\nHow are you currently involved in your local or online community, or is there a specific project you would like to explore next?",
+    "excerpt": "Perspectives on modern society living, communication, and mutual respect.",
+    "content": "Living in a multi-story apartment society requires a balance between personal space and collective responsibility. Open dialogues, constructive feedback, and thoughtful habits ensure everyone enjoys a peaceful environment.",
+    "image": "https://drive.google.com/open?id=1vHf_3ak7fIYXyzNp0Vjp5SYHaJ0COlya",
     "date": "19 Oct 2026",
     "month": "October 2026"
-  }
+  },
+  {
+    "id": "10a14fcd-633d-49a8-a299-8b01aa3eb1ef",
+    "title": "Test",
+    "author": "Swapnil Muley",
+    "category": "Kids & Student Achievements",
+    "excerpt": "Recognizing academic milestones, sports trophies, and art competition winners.",
+    "content": "From board exam achievements to winning city-level sports competitions, our young residents continue to make Jayanti Nagari 7 proud. Encouraging their effort builds confidence and inspires future excellence.",
+    "image": "https://drive.google.com/open?id=1vHf_3ak7fIYXyzNp0Vjp5SYHaJ0COlya",
+    "date": "20 Oct 2026",
+    "month": "October 2026"
+  },
+  {
+  "id": "e7b29a14-8f32-4d11-9c88-123456789abc",
+  "title": "Checkmate to Success: Young Prodigy Wins District Chess Championship",
+  "author": "Sneha Kulkarni",
+  "category": "Kids & Student Achievements",
+  "excerpt": "Ten-year-old local resident Aarav Mehta secured the First Place trophy at the Nagpur District Under-12 Chess Championship, showcasing brilliant strategic gameplay.",
+  "content": "<h3>A Remarkable Victory for Our Young Talent</h3><p>Ten-year-old local resident <strong>Aarav Mehta</strong> secured the <u>First Place trophy</u> at the Nagpur District Under-12 Chess Championship, showcasing brilliant strategic gameplay and sharp focus.</p><p>Competing against over 150 young minds from across the region, Aarav displayed exceptional tactical skills through seven intense rounds. His dedication to daily practice and passion for the game have truly made our community proud.</p><p><u>Key Highlights of the Tournament:</u></p><ul><li>Undefeated streak across multiple critical matches</li><li>Demonstrated advanced endgame strategy and time management</li></ul><p>We congratulate Aarav on this milestone and wish him the very best for the upcoming state-level tournament!</p>",
+  "image": "https://drive.google.com/open?id=1vHf_3ak7fIYXyzNp0Vjp5SYHaJ0COlya",
+  "date": "21 Oct 2026",
+  "month": "October 2026"
+}
   ],
   "gallery": [
     {

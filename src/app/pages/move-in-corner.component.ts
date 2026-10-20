@@ -190,6 +190,7 @@ import { MagazineService } from '../core/services/magazine.service';
         grid-template-columns: 1fr;
       }
     }
+
   `]
 })
 export class MoveInCornerComponent {

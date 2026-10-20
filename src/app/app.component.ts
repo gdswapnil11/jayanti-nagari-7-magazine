@@ -10,7 +10,7 @@ import { MagazineService } from './core/services/magazine.service';
   template: `
     <header class="site-header">
       <div class="topline">
-        <span>JAYANTI NAGARI 7</span>
+        <span>JAYANTI NAGARI 7 • BETA VERSION</span>
         <span>COMMUNITY MAGAZINE • {{ magazine.edition()?.quarter || 'QUARTERLY EDITION' }} {{ magazine.edition()?.year || '' }}</span>
       </div>
       <div class="masthead">

@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { Story } from '../core/models/magazine.model';
 import { StoryCategoryPlaceholderComponent } from '../shared/story-category-placeholder.component';
 import { MagazineService } from '../core/services/magazine.service';
 
@@ -11,8 +12,8 @@ import { MagazineService } from '../core/services/magazine.service';
   template: `
     <section class="page-header container">
       <span class="eyebrow">COMMUNITY STORY</span>
-      <h1>{{ article()?.title || 'Story' }}</h1>
-      <p>{{ article()?.excerpt || 'Read this story from the community magazine.' }}</p>
+      <h1>{{ article()?.title || story()?.title || 'Story' }}</h1>
+      <p>{{ article()?.excerpt || story()?.excerpt || 'Read this story from the community magazine.' }}</p>
     </section>
 
     @if (article(); as article) {
@@ -23,7 +24,7 @@ import { MagazineService } from '../core/services/magazine.service';
         </div>
 
         <article class="article-detail-body">
-          <jn7-story-category-placeholder [category]="article.category" [image]="article.image" class="feature" />
+          <jn7-story-category-placeholder [category]="article.category" [image]="article.image" [imageAlt]="article.title" class="feature" />
           <div class="article-author">
             @if (article.authorImage) {
               <img class="article-author-photo" [src]="article.authorImage" [alt]="article.author">
@@ -37,12 +38,40 @@ import { MagazineService } from '../core/services/magazine.service';
             }
             <div class="article-author-info"><small>Written by</small><strong>{{ article.author }}</strong></div>
           </div>
-          @for (paragraph of paragraphs(article.excerpt); track $index; let first = $first) {
-            <p [class.article-detail-intro]="first">{{ paragraph }}</p>
-          }
-          @for (paragraph of paragraphs(article.content); track $index) {
-            <p>{{ paragraph }}</p>
-          }
+          <div class="article-rich-content article-detail-intro" [innerHTML]="richContent(article.excerpt)"></div>
+          <div class="article-rich-content" [innerHTML]="richContent(article.content)"></div>
+        </article>
+
+        <div class="article-detail-actions">
+          <a routerLink="/stories" class="button">← Back to stories</a>
+          <a
+            class="button whatsapp-share"
+            [href]="whatsAppShareUrl()"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share this story on WhatsApp"
+          >Share on WhatsApp</a>
+        </div>
+      </section>
+    } @else if (story(); as story) {
+      <section class="container section article-detail">
+        <div class="article-detail-meta">
+          <span class="tag">{{ story.category }}</span>
+          <span>{{ story.date }}</span>
+        </div>
+
+        <article class="article-detail-body">
+          <jn7-story-category-placeholder [category]="story.category" [image]="story.image" [imageAlt]="story.title" class="feature" />
+          <div class="article-author">
+            <span class="article-author-placeholder" aria-label="Generic author avatar">
+              <svg viewBox="0 0 64 64" aria-hidden="true">
+                <circle cx="32" cy="22" r="12"></circle>
+                <path d="M10 58c1-13 10-21 22-21s21 8 22 21"></path>
+              </svg>
+            </span>
+            <div class="article-author-info"><small>Written by</small><strong>{{ story.author }}</strong></div>
+          </div>
+          <div class="article-rich-content article-detail-intro" [innerHTML]="richContent(story.excerpt)"></div>
         </article>
 
         <div class="article-detail-actions">
@@ -65,12 +94,40 @@ import { MagazineService } from '../core/services/magazine.service';
   `,
   styles: [`
     .article-detail-body jn7-story-category-placeholder {
-      margin-bottom: 26px;
+      display: block;
+      width: min(100%, 760px);
+      margin: 0 auto 32px;
+      border: 1px solid var(--line);
+      background: var(--cream);
+    }
+
+    .article-detail-body {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: clamp(20px, 4vw, 48px);
+    }
+
+    .article-detail-meta {
+      width: min(100%, 980px);
+      margin: 0 auto;
+    }
+
+    .article-detail-body .article-author,
+    .article-detail-body > .article-rich-content {
+      width: min(100%, 740px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .article-detail-body > .article-rich-content + .article-rich-content {
+      margin-top: 20px;
     }
 
     .article-detail-actions {
       display: flex;
       flex-wrap: wrap;
+      width: min(100%, 980px);
+      margin: 0 auto;
       gap: 12px;
     }
 
@@ -150,16 +207,49 @@ export class ArticleDetailComponent {
     const id = this.params().get('id');
     return this.magazine.edition()?.articles.find(item => String(item.id) === id);
   });
-  paragraphs(text: string): string[] {
-    return text.split(/\r?\n\s*\r?\n/).map(paragraph => paragraph.trim()).filter(Boolean);
+
+  readonly story = computed(() => {
+    const slug = this.params().get('id');
+    if (!slug) return undefined;
+    return this.magazine.edition()?.stories.find(item => this.toSlug(item.title) === slug);
+  });
+
+  richContent(text: string): string {
+    if (/<\/?[a-z][\w:-]*(?:\s[^<>]*)?\s*\/?>/i.test(text)) return text;
+
+    return text.split(/\r?\n\s*\r?\n/)
+      .map(paragraph => paragraph.trim())
+      .filter(Boolean)
+      .map(paragraph => `<p>${paragraph.split(/\r?\n/).map(line => this.escapeHtml(line)).join('<br>')}</p>`)
+      .join('');
+  }
+
+  private escapeHtml(text: string): string {
+    const entities: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    };
+    return text.replace(/[&<>"']/g, character => entities[character]);
   }
 
   readonly whatsAppShareUrl = computed(() => {
-    const article = this.article();
-    if (!article) return '';
+    const item = this.article() ?? this.story();
+    if (!item) return '';
 
     const currentUrl = this.document.location?.href ?? '';
-    const message = `${article.title} ${currentUrl}`.trim();
+    const message = `${item.title} ${currentUrl}`.trim();
     return `https://wa.me/?text=${encodeURIComponent(message)}`;
   });
+
+  private toSlug(title: string): string {
+    return title
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
 }

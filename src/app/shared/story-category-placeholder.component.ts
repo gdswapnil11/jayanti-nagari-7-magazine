@@ -7,11 +7,12 @@ import { Component, Input } from '@angular/core';
     <div
       class="story-placeholder"
       [attr.data-category]="category"
+      [class.has-provided-image]="!!image?.trim()"
       role="img"
       [attr.aria-label]="category + ' story illustration'"
     >
       @if (resolvedImage) {
-        <img class="category-image" [src]="resolvedImage" [alt]="category + ' category image'" />
+        <img class="category-image" [src]="resolvedImage" [alt]="imageAlt || category + ' category image'" />
       }
       <span class="placeholder-orbit" aria-hidden="true"></span>
       @if (!resolvedImage) {
@@ -133,11 +134,40 @@ import { Component, Input } from '@angular/core';
     :host(.feature) .story-placeholder {
       height: clamp(240px, 42vw, 420px);
     }
+
+    :host(.achievement-banner) .story-placeholder {
+      height: 170px;
+    }
+
+    :host(.feature) .story-placeholder.has-provided-image {
+      height: auto;
+      min-height: 0;
+      background: var(--cream);
+    }
+
+    :host(.feature) .story-placeholder.has-provided-image .category-image {
+      position: static;
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 620px;
+      object-fit: contain;
+      filter: none;
+    }
+
+    :host(.feature) .story-placeholder.has-provided-image::before,
+    :host(.feature) .story-placeholder.has-provided-image::after,
+    :host(.feature) .story-placeholder.has-provided-image .placeholder-orbit,
+    :host(.feature) .story-placeholder.has-provided-image .placeholder-category,
+    :host(.feature) .story-placeholder.has-provided-image .placeholder-caption {
+      display: none;
+    }
   `]
 })
 export class StoryCategoryPlaceholderComponent {
   @Input({ required: true }) category = '';
   @Input() image?: string;
+  @Input() imageAlt = '';
 
   private readonly categoryImages: Record<string, string> = {
     'Community & Society Updates': 'assets/images/categories/Community & Society Updates.png',
@@ -152,13 +182,15 @@ export class StoryCategoryPlaceholderComponent {
   };
 
   get resolvedImage(): string | null {
-    const categoryImage = this.categoryImages[this.category]?.trim();
-    if (categoryImage) {
-      return categoryImage;
+    const providedImage = this.image?.trim();
+    if (providedImage) {
+      const driveId = providedImage.match(/drive\.google\.com\/(?:open\?id=|file\/d\/)([^/?&]+)/)?.[1];
+      return driveId
+        ? `https://drive.google.com/thumbnail?id=${driveId}&sz=w1200`
+        : providedImage;
     }
 
-    const providedImage = this.image?.trim();
-    return providedImage || null;
+    return this.categoryImages[this.category]?.trim() || null;
   }
 
   get categoryMark(): string {
