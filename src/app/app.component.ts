@@ -25,6 +25,8 @@ import { MagazineService } from './core/services/magazine.service';
         <a routerLink="/gallery" routerLinkActive="active">Gallery</a>
         <a routerLink="/move-in-corner" routerLinkActive="active">Move-In Corner</a>
         <a routerLink="/community" routerLinkActive="active">Professionals</a>
+        <a routerLink="/service-directory" routerLinkActive="active">Service Directory</a>
+        <a routerLink="/offers" routerLinkActive="active">JN-7 Offers</a>
       </nav>
     </header>
 
@@ -50,6 +52,8 @@ import { MagazineService } from './core/services/magazine.service';
         <a routerLink="/gallery">Gallery</a>
         <a routerLink="/move-in-corner">Move-In Corner</a>
         <a routerLink="/community">Professionals</a>
+        <a routerLink="/service-directory">Service Directory</a>
+        <a routerLink="/offers">JN-7 Offers</a>
       </div>
     </footer>
 
@@ -68,7 +72,23 @@ import { MagazineService } from './core/services/magazine.service';
         </section>
       </div>
     }
-  `
+  `,
+  styles: [`
+    .nav {
+      flex-wrap: wrap;
+      overflow: visible;
+    }
+
+    .nav a {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        gap: 8px 20px;
+      }
+    }
+  `]
 })
 export class AppComponent implements OnInit {
   readonly magazine = inject(MagazineService);

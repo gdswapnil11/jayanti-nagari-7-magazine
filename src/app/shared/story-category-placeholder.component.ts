@@ -150,7 +150,7 @@ import { Component, Input } from '@angular/core';
       display: block;
       width: 100%;
       height: auto;
-      max-height: 620px;
+      max-height: 380px;
       object-fit: contain;
       filter: none;
     }

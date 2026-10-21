@@ -86,6 +86,12 @@
       "description": "Join the community for Ravan Dahan on Dasara."
     },
     {
+      "title": "Kojagiri Purnima Celebration",
+      "date": "2026-10-25",
+      "location": "Wing Wise Courtyards",
+      "description": "Join the community for Kojagiri Purnima Celebration."
+    },
+    {
       "title": "Diwali Meet",
       "date": "2026-11-08",
       "location": "Club House",
@@ -264,6 +270,180 @@
       "isJayantiNagariOwner": true
     }
   ],
+  "serviceDirectory": [
+    {
+      "id": "sample-house-help-01",
+      "name": "Sample House Help 01",
+      "category": "House Help",
+      "services": ["Dusting", "Home cleaning"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-house-help-02",
+      "name": "Sample House Help 02",
+      "category": "House Help",
+      "services": ["Dishwashing", "Kitchen cleaning"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-house-help-03",
+      "name": "Sample House Help 03",
+      "category": "House Help",
+      "services": ["Clothes washing", "Ironing"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-house-help-04",
+      "name": "Sample House Help 04",
+      "category": "House Help",
+      "services": ["Home cooking", "Meal preparation"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-house-help-05",
+      "name": "Sample House Help 05",
+      "category": "House Help",
+      "services": ["Dusting", "Cleaning", "Dishwashing"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-plumbing-01",
+      "name": "Sample Plumber 01",
+      "category": "Plumbing",
+      "services": ["Tap and pipe repair", "Leak detection"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-plumbing-02",
+      "name": "Sample Plumber 02",
+      "category": "Plumbing",
+      "services": ["Bathroom fittings", "Drain cleaning"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-electrical-01",
+      "name": "Sample Electrician 01",
+      "category": "Electrical",
+      "services": ["Electrical repairs", "Light and fan installation"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-appliance-repair-01",
+      "name": "Sample Appliance Repair 01",
+      "category": "Appliance Repair",
+      "services": ["Washing machine repair", "Refrigerator repair"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-carpentry-01",
+      "name": "Sample Carpenter 01",
+      "category": "Carpentry",
+      "services": ["Furniture repair", "Door and cupboard work"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-other-service-01",
+      "name": "Sample Other Service 01",
+      "category": "Other Services",
+      "services": ["Pest control"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-other-service-02",
+      "name": "Sample Other Service 02",
+      "category": "Other Services",
+      "services": ["AC servicing"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-house-help-01",
+      "name": "Sample House Help 01",
+      "category": "House Help",
+      "services": ["Dusting", "Home cleaning"],
+      "phone": "+91 00000 00000"
+    },
+    {
+      "id": "sample-house-help-02",
+      "name": "Sample House Help 02",
+      "category": "House Help",
+      "services": ["Dishwashing", "Kitchen cleaning"],
+      "phone": "+91 00000 00000"
+    }
+  ],
+  "communityOffers": [
+    {
+      "id": "sample-restaurant-offer-01",
+      "businessName": "Sample Neighborhood Cafe",
+      "category": "Restaurants & Cafes",
+      "title": "Dine-In Savings",
+      "offerLabel": "10% OFF",
+      "description": "A sample neighborhood dining offer for JN-7 residents.",
+      "terms": "Demo offer only. Replace with a participating business's confirmed offer and terms before publishing."
+    },
+    {
+      "id": "sample-restaurant-offer-02",
+      "businessName": "Sample Family Restaurant",
+      "category": "Restaurants & Cafes",
+      "title": "A Treat With Your Meal",
+      "offerLabel": "FREE DESSERT",
+      "description": "A sample treat to demonstrate how restaurant deals will appear.",
+      "terms": "Demo offer only. Replace with a participating business's confirmed offer and terms before publishing."
+    },
+    {
+      "id": "sample-hotel-offer-01",
+      "businessName": "Sample City Hotel",
+      "category": "Hotels & Resorts",
+      "title": "Weekday Stay Savings",
+      "offerLabel": "STAY DEAL",
+      "description": "A sample hotel offer layout for nearby stays and getaways.",
+      "terms": "Demo offer only. Replace with confirmed dates, inclusions, availability, and booking terms before publishing."
+    },
+    {
+      "id": "sample-resort-offer-01",
+      "businessName": "Sample Weekend Resort",
+      "category": "Hotels & Resorts",
+      "title": "Family Getaway Package",
+      "offerLabel": "FAMILY PACKAGE",
+      "description": "A sample resort package to showcase family-friendly offers.",
+      "terms": "Demo offer only. Replace with confirmed dates, inclusions, availability, and booking terms before publishing."
+    },
+    {
+      "id": "sample-showroom-offer-01",
+      "businessName": "Sample Home & Living Showroom",
+      "category": "Showrooms",
+      "title": "Savings on Home Essentials",
+      "offerLabel": "SHOWROOM DEAL",
+      "description": "A sample showroom promotion for residents planning a home refresh.",
+      "terms": "Demo offer only. Replace with the business's confirmed eligible products and terms before publishing."
+    },
+    {
+      "id": "sample-showroom-offer-02",
+      "businessName": "Sample Auto Showroom",
+      "category": "Showrooms",
+      "title": "A Benefit for JN-7 Residents",
+      "offerLabel": "RESIDENT PERK",
+      "description": "A sample offer card for local vehicle and lifestyle showrooms.",
+      "terms": "Demo offer only. Replace with the participating showroom's confirmed benefit and terms before publishing."
+    },
+    {
+      "id": "sample-shopping-offer-01",
+      "businessName": "Sample Neighborhood Store",
+      "category": "Shopping",
+      "title": "Savings on Everyday Essentials",
+      "offerLabel": "SHOPPING DEAL",
+      "description": "A sample neighborhood shopping offer for everyday essentials.",
+      "terms": "Demo offer only. Replace with confirmed eligible items, dates, and terms before publishing."
+    },
+    {
+      "id": "sample-wellness-offer-01",
+      "businessName": "Sample Wellness Studio",
+      "category": "Health & Wellness",
+      "title": "Start Your Wellness Journey",
+      "offerLabel": "FIRST VISIT",
+      "description": "A sample wellness offer for a first visit or introductory service.",
+      "terms": "Demo offer only. Replace with the provider's confirmed services, dates, and terms before publishing."
+    }
+  ],
   "moveInCorner": [
     {
       "id": 1,
@@ -423,10 +603,21 @@
   "category": "Kids & Student Achievements",
   "excerpt": "Ten-year-old local resident Aarav Mehta secured the First Place trophy at the Nagpur District Under-12 Chess Championship, showcasing brilliant strategic gameplay.",
   "content": "<h3>A Remarkable Victory for Our Young Talent</h3><p>Ten-year-old local resident <strong>Aarav Mehta</strong> secured the <u>First Place trophy</u> at the Nagpur District Under-12 Chess Championship, showcasing brilliant strategic gameplay and sharp focus.</p><p>Competing against over 150 young minds from across the region, Aarav displayed exceptional tactical skills through seven intense rounds. His dedication to daily practice and passion for the game have truly made our community proud.</p><p><u>Key Highlights of the Tournament:</u></p><ul><li>Undefeated streak across multiple critical matches</li><li>Demonstrated advanced endgame strategy and time management</li></ul><p>We congratulate Aarav on this milestone and wish him the very best for the upcoming state-level tournament!</p>",
-  "image": "https://drive.google.com/open?id=1vHf_3ak7fIYXyzNp0Vjp5SYHaJ0COlya",
+  "image": "assets/images/categories/Kids & Student Achievements.png",
   "date": "21 Oct 2026",
   "month": "October 2026"
-}
+},
+ {
+    "id": "4c0c5395-a5e3-4ad2-83af-934e9089fb3c",
+    "title": "Building a Cleaner, Greener Tomorrow: Our Shared Responsibility",
+    "author": "Swapnil Muley",
+    "category": "Kids & Student Achievements",
+    "excerpt": "A clean, green society relies on smart waste management and shared community effort.",
+    "content": "A clean and green society is not just about aesthetics; it is the cornerstone of healthy living and community well-being. When residents step out into well-maintained courtyards, spotless walkways, and vibrant green gardens, it instantly uplifts the mood and fosters a profound sense of pride in our neighborhood. However, maintaining such high standards requires more than just routine housekeeping—it demands our collective participation.\n\n1. Smart Waste Management at the Source\nEffective cleanliness begins right at our doorsteps. Strict segregation of dry and wet waste ensures that organic kitchen scraps are handled properly while recyclables find their way to reuse centers. By minimizing single-use plastics within common areas and ensuring dustbins are kept covered, we significantly reduce pest problems and foul odors.\n\n2. The Power of Community Clean-Up Drives\nOrganizing periodic weekend clean-up campaigns transforms a routine maintenance task into a powerful community-bonding activity. When neighbors of all ages come together to clear out fallen leaves, maintain shared gardens, and tidy up recreation zones, it strengthens social connections. It also teaches younger generations invaluable lessons about environmental responsibility.\n\n3. Proactive Monsoon and Drainage Care\nRegular upkeep of stormwater drains and common pathways is vital for preventing water stagnation. Keeping drainage lines clear eliminates mosquito-breeding zones, safeguarding everyone from vector-borne illnesses and ensuring our society remains safe and hygienic year-round.\n\nA Collective Pledge\nA residential complex truly shines when every resident treats public spaces with the same care they give their own homes. Let us pledge to support our housekeeping staff, manage our waste responsibly, and build a cleaner, healthier habitat for our families.",
+    "image": "https://drive.google.com/open?id=13L3WB5B5hiUYNKeu5vCOhXdeojPPERRV",
+    "date": "21 Oct 2026",
+    "month": "October 2026"
+  }
   ],
   "gallery": [
     {

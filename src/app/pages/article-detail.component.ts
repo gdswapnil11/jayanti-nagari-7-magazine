@@ -95,8 +95,8 @@ import { MagazineService } from '../core/services/magazine.service';
   styles: [`
     .article-detail-body jn7-story-category-placeholder {
       display: block;
-      width: min(100%, 760px);
-      margin: 0 auto 32px;
+      width: min(100%, 560px);
+      margin: 0 auto 28px;
       border: 1px solid var(--line);
       background: var(--cream);
     }

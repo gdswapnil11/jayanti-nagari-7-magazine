@@ -36,6 +36,40 @@ export interface CommunityItem {
   isJayantiNagariOwner?: boolean;
 }
 
+export type ServiceDirectoryCategory =
+  | 'House Help'
+  | 'Plumbing'
+  | 'Electrical'
+  | 'Appliance Repair'
+  | 'Carpentry'
+  | 'Other Services';
+
+export interface ServiceDirectoryItem {
+  id: string;
+  name: string;
+  category: ServiceDirectoryCategory;
+  services: string[];
+  phone: string;
+}
+
+export type CommunityOfferCategory =
+  | 'Restaurants & Cafes'
+  | 'Hotels & Resorts'
+  | 'Showrooms'
+  | 'Shopping'
+  | 'Health & Wellness'
+  | 'Other Offers';
+
+export interface CommunityOffer {
+  id: string;
+  businessName: string;
+  category: CommunityOfferCategory;
+  title: string;
+  offerLabel: string;
+  description: string;
+  terms: string;
+}
+
 export interface Article {
   id: number | string;
   title: string;
@@ -98,6 +132,8 @@ export interface MagazineEdition extends EditionSummary {
   stories: Story[];
   events: EventItem[];
   community: CommunityItem[];
+  serviceDirectory: ServiceDirectoryItem[];
+  communityOffers: CommunityOffer[];
   moveInCorner: MoveInListing[];
   articles: Article[];
   gallery: GalleryPhoto[];
