@@ -32,7 +32,7 @@ import { MagazineService } from '../core/services/magazine.service';
         <div class="article-grid">
           @for (article of filteredArticles(); track article.id) {
             <article class="article-grid-card">
-              <jn7-story-category-placeholder [category]="article.category" [image]="article.image" />
+              <jn7-story-category-placeholder class="achievement-banner" [category]="article.category" />
               <div class="article-card-top">
                 <span class="tag">{{ article.category }}</span>
                 <small>{{ article.date }}</small>
