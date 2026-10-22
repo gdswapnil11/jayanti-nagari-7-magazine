@@ -7,17 +7,18 @@ import { Component } from '@angular/core';
     <main class="maintenance-page">
       <section class="maintenance-card" aria-labelledby="maintenance-title">
         <img class="brand-icon" src="assets/jn7-icon.svg" alt="">
-        <span class="eyebrow">JAYANTI NAGARI 7</span>
-        <div class="status"><span aria-hidden="true"></span> TEMPORARILY UNAVAILABLE</div>
-        <h1 id="maintenance-title">We’ll be<br><em>back soon.</em></h1>
+        <span class="eyebrow">A MESSAGE FROM SWAPNIL</span>
+        <div class="status"><span aria-hidden="true"></span> WITH GRATITUDE</div>
+        <h1 id="maintenance-title">Before our<br><em>first edition.</em></h1>
         <p class="message">
-          Our community magazine is taking a short break while we make some updates.
-          Please check back soon.
+          We were getting ready to launch our community magazine, but had to stop
+          before it could begin. Thank you for your interest and support.
+          We’re sorry we couldn’t share this journey with you.
         </p>
         <div class="divider" aria-hidden="true"></div>
-        <p class="thanks">Thank you for your patience.</p>
+        <p class="thanks">With gratitude, Swapnil</p>
       </section>
-      <p class="page-footer">OUR SOCIETY. OUR STORIES.</p>
+      <p class="page-footer">THANK YOU FOR BEING PART OF OUR STORY</p>
     </main>
   `,
   styles: [`
