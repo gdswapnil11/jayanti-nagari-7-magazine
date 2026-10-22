@@ -9,14 +9,14 @@ import { Component } from '@angular/core';
         <img class="brand-icon" src="assets/jn7-icon.svg" alt="">
         <span class="eyebrow">A MESSAGE FROM SWAPNIL</span>
         <div class="status"><span aria-hidden="true"></span> WITH GRATITUDE</div>
-        <h1 id="maintenance-title">Before our<br><em>first edition.</em></h1>
+        <h1 id="maintenance-title">Goodbye,<br><em>everyone.</em></h1>
         <p class="message">
           We were getting ready to launch our community magazine, but had to stop
           before it could begin. Thank you for your interest and support.
           We’re sorry we couldn’t share this journey with you.
         </p>
         <div class="divider" aria-hidden="true"></div>
-        <p class="thanks">With gratitude, Swapnil</p>
+        <p class="thanks">Thank You Jayanti Nagari - 7</p>
       </section>
       <p class="page-footer">THANK YOU FOR BEING PART OF OUR STORY</p>
     </main>
