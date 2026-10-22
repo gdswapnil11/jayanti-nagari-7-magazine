@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'community', loadComponent: () => import('./pages/community.component').then(m => m.CommunityComponent) },
   { path: 'service-directory', loadComponent: () => import('./pages/service-directory.component').then(m => m.ServiceDirectoryComponent) },
   { path: 'offers', loadComponent: () => import('./pages/offers.component').then(m => m.OffersComponent) },
+  { path: 'terms', loadComponent: () => import('./pages/terms.component').then(m => m.TermsComponent) },
   { path: 'archive', loadComponent: () => import('./pages/archive.component').then(m => m.ArchiveComponent) },
   { path: 'editions/:editionId', loadComponent: () => import('./pages/edition-viewer.component').then(m => m.EditionViewerComponent) },
   { path: '**', redirectTo: '' }

@@ -1,9 +1,11 @@
 import { Component, computed, inject, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { CommunityOffer, CommunityOfferCategory } from '../core/models/magazine.model';
 import { MagazineService } from '../core/services/magazine.service';
 
 @Component({
   standalone: true,
+  imports: [RouterLink],
   template: `
     <section class="offers-hero">
       <div class="container offers-hero-inner">
@@ -74,8 +76,9 @@ import { MagazineService } from '../core/services/magazine.service';
               </div>
               @if (expandedOfferId() === offer.id) {
                 <div class="offer-terms">
-                  <strong>Offer details</strong>
+                  <h3>Offer terms &amp; conditions</h3>
                   <p>{{ offer.terms }}</p>
+                  <a routerLink="/terms">Read JN-7 website terms</a>
                 </div>
               }
               <button class="offer-action" type="button" (click)="toggleOffer(offer.id)">
@@ -491,8 +494,23 @@ import { MagazineService } from '../core/services/magazine.service';
       color: var(--ink);
     }
 
+    .offer-terms h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+    }
+
     .offer-terms p {
       margin: 5px 0 0;
+    }
+
+    .offer-terms a {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .offer-action {

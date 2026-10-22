@@ -15,6 +15,7 @@ Angular 20 quarterly magazine for a residential community. Published content is 
 - Photo gallery with masonry layout and image viewer
 - Resident and neighbourhood profiles
 - Professional Directory, searchable Service Directory, and JN-7 Offers for local businesses
+- Site-wide Terms & Conditions and offer-specific terms
 - Archive pages for past editions
 - Responsive layout for desktop and mobile
 - Strict TypeScript and standalone Angular components

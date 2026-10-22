@@ -54,6 +54,7 @@ import { MagazineService } from './core/services/magazine.service';
         <a routerLink="/community">Professionals</a>
         <a routerLink="/service-directory">Service Directory</a>
         <a routerLink="/offers">JN-7 Offers</a>
+        <a routerLink="/terms">Terms &amp; Conditions</a>
       </div>
     </footer>
 
