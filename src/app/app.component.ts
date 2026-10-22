@@ -2,12 +2,16 @@ import { Component, OnInit, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { filter, take } from 'rxjs';
 import { MagazineService } from './core/services/magazine.service';
+import { MaintenanceComponent } from './pages/maintenance.component';
 
 @Component({
   selector: 'jn7-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MaintenanceComponent],
   template: `
+    @if (maintenanceMode) {
+      <jn7-maintenance />
+    } @else {
     <header class="site-header">
       <div class="topline">
         <span>JAYANTI NAGARI 7 • BETA VERSION</span>
@@ -73,6 +77,7 @@ import { MagazineService } from './core/services/magazine.service';
         </section>
       </div>
     }
+    }
   `,
   styles: [`
     .nav {
@@ -92,11 +97,16 @@ import { MagazineService } from './core/services/magazine.service';
   `]
 })
 export class AppComponent implements OnInit {
+  readonly maintenanceMode = true;
   readonly magazine = inject(MagazineService);
   private readonly router = inject(Router);
   showContribute = false;
 
   ngOnInit(): void {
+    if (this.maintenanceMode) {
+      return;
+    }
+
     this.router.events.pipe(
       filter((event): event is NavigationEnd => event instanceof NavigationEnd),
       take(1)
